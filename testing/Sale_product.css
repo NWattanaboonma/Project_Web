@@ -1,0 +1,46 @@
+body{
+    background-color: white;
+}
+.container{
+    padding: 2;
+    /* margin: auto; */
+    width: 1400px;
+    
+}
+.slide{
+    max-width: 30rem;
+    margin: auto;
+    
+}
+.picture{
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.picture img{
+    width: 320px;
+    height: 420px;
+    flex: 1 0 100%;
+
+}
+.click {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 30rem;
+}
+.box_product{
+    padding: 8px 12px;
+    background-color: black;
+    text-decoration: none;
+    color: aliceblue;
+}
+.size{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40rem;
+}
+.size:active{
+    border-color: red;
+}
+
+    

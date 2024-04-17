@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link  rel="stylesheet" href="Register.css">
+    <script src = "Register.js"></script>
+    <script src="/nav.js" defer></script>
+    <navbar-component></navbar-component>
+</head>
+<body>
+    <nav class="bar"></nav>
+    <section class="container">
+        <div class="bg">
+            <div class="content">
+                HYPEGEAR
+            </div>
+        </div>
+        
+        <div class="box_login">
+            <div class="head_login"><b>Register</b></div>
+
+            <form>
+                <input type="text" placeholder="Firstname" pattern="[A-Za-z]" id="Fame">
+                <input type="text" placeholder="Lastname" pattern="[A-Za-z]" id="Lame">
+                <input type="email" placeholder="Email"  id="email">
+                <input type="password" placeholder="Password" id="PW">
+                <input type="date">
+                <input type="text" placeholder="phone number" pattern="[0-9]{10}" id="Pnumber">
+
+                <div>
+                <button onclick="">Sign in</button>
+                
+                <a href="/login"><p><u>Login?</u></p></a>
+                </div>
+                
+
+            </form>
+            
+        </div>
+    </section>
+
+
+
+    <footer-component></footer-component>
+</body>
+</html>

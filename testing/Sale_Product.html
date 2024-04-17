@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link  rel="stylesheet" href="homepage.css">
+    <link  rel="stylesheet" href="Sale_product.css">
+    <script src="product.js"></script>
+        <nav class="Menu">
+            <div>
+            <a href="Home_page.html" class ="logo_hyper_home_page black ">HYPEGEAR</a>
+            <a href="Home_page.html" class="line space white"> Home</a>
+            <a href="#" class="line space_between white"> Collection</a>
+            <a href="Sale_Product.html" class="line space_between white"> Sale</a>
+            <a href="#" class="line space_between white"> Support</a>
+        </div>
+        <div class="space_right">
+            <input type="text" id="ss"  placeholder="Search" ondragenter="">
+            
+            <button onclick=advansearch() class="btn "></button>
+            <a href="#" class="line space_between white"><img src="Pic/Nav/Login_Page.png" class="Logo_size"></a>
+            <a href="#" class="line space_between white"><img src="Pic/Nav/Line_admins.png" class="Logo_size"></a>
+        </div>
+        </nav >      
+    </head>
+
+    <body>
+        <nav style="height: 50px;"></nav>
+        <br>
+        <section class="container">
+            <div class="slide">
+                <div class="picture">
+                    <img id="p1" src="Angel.png">
+                    <img id="p2" src="Bloom_b.png">
+                    <img id="p3" src="Bloom_w.png">
+                </div>
+                <br>
+                <div class="click">
+                        <a href="#p1" class="box_product">1</a>
+                        <a href="#p2" class="box_product">2</a>
+                        <a href="#p3" class="box_product">3</a>
+                </div>
+            </div>
+    </section>
+    <div style="padding-left: 25%; max-width: 30rem; ">
+        <br>
+        <div style="display: flex; align-items: flex-end;"><h1>RICH AS HELL <sub><small>ID:@56453</small></sub></h1></div>
+        <br>
+        <div><h2><s>790 THB</s></h2></div>
+        <div><h3 style="color: red;">550 THB</h3></div>
+        <br>
+        <h2>Collection</h2>
+        <br>
+        <h2>SIZE</h2>
+        <form action="" >
+            <br>
+            <section class="size">
+                <button class="box_product" onclick="size_box()">S</button>
+                <button class="box_product" name="size_btn">M</button>
+                <button class="box_product" name="size_btn">L</button>
+                <button class="box_product" name="size_btn">XL</button>
+                <button class="box_product" name="size_btn">XXL</button>
+                <button class="box_product" name="size_btn">Super_XL</button>
+            </section>
+        <br>
+        <h2><label>Quantity:</label><input type="number"></h2>
+        <br>
+        <!-- <div class="left:50 rem"> -->
+            <button type="submit" >Buy</button>
+        <!-- </div> -->
+        </form>
+    </div>
+        <footer>
+            <ul class="bottom_footer black">
+                <a>About us</a>
+                <a>Our Services</a>
+                <a>Privacy Policy</a>
+                <a>Term & conditions</a>
+            </ul>
+        </footer>  
+    </body> 
+    </html>
