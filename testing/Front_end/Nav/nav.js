@@ -37,7 +37,7 @@ class NavBar extends HTMLElement {
     }
     .Menu{
         Top: 0;
-        width: 1440px ;
+        width: 1445px ;
         position: fixed;
         z-index: 1;
         background-color: white;
@@ -54,6 +54,7 @@ class NavBar extends HTMLElement {
     }
     body{
         margin: 0%;
+        width: 1440px;
     }
     .bar{
         height: 5rem;

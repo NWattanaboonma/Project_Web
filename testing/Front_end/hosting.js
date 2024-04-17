@@ -31,7 +31,7 @@ function call(Name,file,url){
     
     router.get(url, (req, res) => {
     res.sendFile(path.join(__dirname,Name, file));
-    console.log("work")
+    console.log(`working: Server AT ${file}`)
 });
 }
 
@@ -39,27 +39,27 @@ function call(Name,file,url){
 call('Home_page_website','Home_page.html','/');
 
 // // See_more
-call('Front_end','See_more','Im-not-a-god-Im-a-human-Collection.html','/Im-not-a-god-Im-a-human-Collection');
-call('Front_end','See_more','MR.Bloom.html','/MR.Bloom');
-call('Front_end','See_more','Special day.html','/Special-day');
+call('See_more','Im-not-a-god-Im-a-human-Collection.html','/Im-not-a-god-Im-a-human-Collection');
+call('See_more','MR.Bloom.html','/MR.Bloom');
+call('See_more','Special day.html','/Special-day');
 
 // Footer
-call('Front_end','Member','About_us.html','/About_us');
-call('Front_end','Ourservice','Ourservice.html','/Ourservices');
-call('Front_end','Privacy','Privacy.html','/Privacy');
-call('Front_end','TermandCondition','terms_and_conditions.html','/TermandCondition');
-call('Front_end','Support','support.html','/Support');
+call('Member','About_us.html','/About_us');
+call('Ourservice','Ourservice.html','/Ourservices');
+call('Privacy','Privacy.html','/Privacy');
+call('TermandCondition','terms_and_conditions.html','/TermandCondition');
+call('Support','support.html','/Support');
 // call('Front-end')
 
 // login
-call('Front_end','Login','login.html','/login');
-call('Front_end','Register','Register.html','/Register');
+call('Login','login.html','/login');
+call('Register','Register.html','/Register');
 
 
 // 
 // search
-call('Front_end','Adv_search','Advance Search.html','/Advance-Search');
-call('Front_end','Adv_search','Search_showproducts.html','/Search_showproducts')
+call('Adv_search','Advance Search.html','/Advance-Search');
+call('Adv_search','Search_showproducts.html','/Search_showproducts')
 
 // Project_web.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});

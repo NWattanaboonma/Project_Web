@@ -21,15 +21,15 @@
 .content{
     display: flex;
     font-size: 12rem;
-    margin-top: 16rem;
-    margin-left: 8rem;
+    margin-top: 12rem;
+    margin-left: 6rem;
 }
 .box_login{
     width: 75%;
     height: 60%;
     background-color: white;
-    margin-left: 14rem;
-    margin-top: 22rem;
+    margin-left: 12rem;
+    margin-top: 18rem;
     border: 1px solid  gray;
     border-radius: 2%;
     
