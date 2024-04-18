@@ -7,21 +7,21 @@ class NavBar extends HTMLElement {
         this.innerHTML = `<nav class="Menu">
         <div class="catagorize">
         <div class="Hypelogo">
-        <a href="/" class ="logo_hyper_home_page black ">HYPEGEAR</a>
+        <a href="/" class ="logo_hyper_home_page black ">HYPEGEAR</a> 
         </div>
         <div class="Hypefunction">
         <a href="/" class="line space_between white"> Home</a>
-        <a href="/" class="line space_between white"> Collection</a>
-        <a href="Sale_Product.html" class="line space_between white"> Sale</a>
-        <a href="/Support" class="line space_between white"> Support</a>
+        <a href="/" class="line space_between white"> Collection </a>
+        <a href="Sale_Product.html" class="line space_between white"> Sale </a>
+        <a href="/Support" class="line space_between white"> Support </a>
         </div>
         <div class="searchbox">
         <form>
         <a href="/Search_showproducts" ><input type="text" id="ss"  placeholder="Search" ></a>
         </form> 
-        <a href="/Advance-Search" class="btn">Advance Search</a>
-        <a href="/login" class="loginbutton lastspace"><img src="/Nav/Login_Page.png" class="Logo_size"></a>
-        <a href="#" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a>
+        <a href="/Advance-Search" class="btn">Advance Search</a> 
+        <a href="/login" class="loginbutton lastspace"><img src="/Nav/Login_Page.png" class="Logo_size"></a> 
+        <a href="#" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a> 
         </div>
         </div>
     </nav > 
@@ -86,7 +86,6 @@ class NavBar extends HTMLElement {
     .searchbox{
         display: flex;
         justify-content: flex-left;
-        
         padding: 0%;
         boarder: 0%;
     

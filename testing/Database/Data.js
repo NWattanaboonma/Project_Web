@@ -23,6 +23,7 @@ user : process.env.MYSQL_USERNAME,
 password : process.env.MYSQL_PASSWORD,
 database : process.env.MYSQL_DATABASE
 });
+
 connection.connect(function(err){
     if(err) throw err;
     console.log(`Connected DB: ${process.env.MYSQL_DATABASE}`);
@@ -31,6 +32,24 @@ connection.connect(function(err){
 router.get('/', (req, res) => {
     console.log('Request at /');
     res.send('Hello World');
+});
+
+
+router.post('/form-submit', (req, res) => {
+    const choose = req.body.search_choice;
+    const num = req.body.search_value;
+    
+    let sql= `select * from professor where EMP_NUM = ${num};`
+    connection.query( sql, function (error, results) {
+        if (error) throw error;
+        if(results==0){
+            console.log(`${results.length} rows returned not found`);
+           return res.sendFile(path.join(`${__dirname}/html/notfound.html`));
+        }else{
+            console.log(`${results.length} rows returned`);
+            return res.send(results);
+        }
+        });
 });
 
 app.listen(process.env.PORT, function() {
