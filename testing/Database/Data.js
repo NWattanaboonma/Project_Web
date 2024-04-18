@@ -14,7 +14,7 @@ let corsOptions = {
 app.use(cors());
 app.use(cors(corsOptions));
 
-
+console.log("photo is joined ya")
 dotenv.config();
 
 var connection = mysql.createConnection({
