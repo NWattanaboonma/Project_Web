@@ -20,3 +20,4 @@ var connection = mysql.createConnection({
     if(err) throw err;
     console.log(`Connected DB: ${process.env.DB_name}`);
     });
+
