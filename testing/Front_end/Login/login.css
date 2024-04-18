@@ -4,13 +4,8 @@
 }
 
 .container{
-
     width: 1400px;
-<<<<<<< HEAD
     height: 1200px;
-=======
-    height: 2000px;
->>>>>>> f9868ee45255805c4fa0e8503d5ecbe9c68c331a
     display: flex;
 }
 .bg{

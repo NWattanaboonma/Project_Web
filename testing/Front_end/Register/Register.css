@@ -2,13 +2,9 @@
 
 .container{
 
-<<<<<<< HEAD
     width: 1300px;
     height: 1500px;
-=======
-    width: 1400px;
-    height: 2000px;
->>>>>>> f9868ee45255805c4fa0e8503d5ecbe9c68c331a
+
     display: flex;
 }
 .bg{
