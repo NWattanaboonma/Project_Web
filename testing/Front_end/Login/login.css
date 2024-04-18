@@ -5,14 +5,14 @@
 
 .container{
 
-    width: 1472px;
+    width: 1400px;
     height: 2000px;
     display: flex;
 }
 .bg{
     position: absolute;
     z-index: -1;
-    width: 1472px;
+    width: 1400px;
     height: 2000px;
     background-image: url(Login_pic/bg.png);
     background-size: cover;

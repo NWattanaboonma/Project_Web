@@ -7,7 +7,7 @@
     
 }
 .WHO{
-    width: 1441px;
+    width: 1400px;
     height: 650px;
     color: aliceblue;
     display: flex;
@@ -19,7 +19,7 @@
     margin: auto;
 }
 .container{
-    width: 1441px;
+    width: 1400px;
     /* position:relative; */
     display: flex;
     justify-content: space-around;
