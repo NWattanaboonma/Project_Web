@@ -16,8 +16,9 @@ class NavBar extends HTMLElement {
         <a href="/Support" class="line space_between white"> Support</a>
         </div>
         <div class="searchbox">
-        <form></form> 
-        <a href="/Search_showproducts" class="space_between"><input type="text" id="ss"  placeholder="Search" ></a>
+        <form>
+        <a href="/Search_showproducts" ><input type="text" id="ss"  placeholder="Search" ></a>
+        </form> 
         <a href="/Advance-Search" class="btn">Advance Search</a>
         <a href="/login" class="loginbutton lastspace"><img src="/Nav/Login_Page.png" class="Logo_size"></a>
         <a href="#" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a>
@@ -37,7 +38,7 @@ class NavBar extends HTMLElement {
     }
     .Menu{
         Top: 0;
-        width: 1445px ;
+        width: 1400px ;
         position: fixed;
         z-index: 1;
         background-color: white;
@@ -46,7 +47,7 @@ class NavBar extends HTMLElement {
     } 
     .catagorize{
         display: flex;
-        width: 1440;
+        width: 100%;
         position: relative;
         justify-content: first-start;
         align-items: baseline;
@@ -54,7 +55,7 @@ class NavBar extends HTMLElement {
     }
     body{
         margin: 0%;
-        width: 1440px;
+        width: 1400px;
     }
     .bar{
         height: 5rem;
@@ -71,7 +72,7 @@ class NavBar extends HTMLElement {
     }
     .Hypefunction{
         font-size: 1rem;
-        width: 55%;
+      
         position: left;
         display: flex;
         flex-flow : flex-start;
@@ -83,12 +84,11 @@ class NavBar extends HTMLElement {
     }
     
     .searchbox{
+        flex: 1;
         display: flex;
-        justify-content: space-around;
-        margin: auto;
+        justify-content: flex-end;
         align-items: center;
-        width: auto;
-       padding-right:2rem;
+        padding: 0 2rem;
     
     }
 
@@ -165,8 +165,11 @@ class NavBar extends HTMLElement {
     .btn:hover{
         background-color:rgba(230, 162, 95, 0.783);
     }
+    footer{
+        width: 1400px;
+        color-background: black;
+    }
     .bottom_footer{
-        width: 1440px;
         padding: 14px 16px;
         background-color: black;
         display: flex;

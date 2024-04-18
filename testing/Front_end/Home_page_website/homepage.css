@@ -12,14 +12,14 @@ body{
 
 /* here */
 .img_home_size_1{
-    width: 1440px;
+    width: 1400px;
     height: 650px;
     gap: 0px;
     display: flex;
 }
 
 .overlay_pic{
-    width: 1400;
+    width: 1400px;
     height: 650px;
     display: flex;
 }
@@ -33,13 +33,15 @@ body{
 
 
 .btn_new_collection{
-    width: 1409px;
-    padding: 14px 16px;
+    width: 1400px;
+    align-content: center;
     display: flex;
     justify-content: center;
     background-color: black;
 }
-
+.btn_new_collection p{
+    padding: 1rem 2rem;
+}
 .img_home_size_2{
     width: 397.21;
     height: 340px;  
@@ -67,6 +69,7 @@ body{
 }
 
 .spare_picture{
+    padding: 0%;
     width: 1400px;
     display: flex;
     justify-content: space-around;

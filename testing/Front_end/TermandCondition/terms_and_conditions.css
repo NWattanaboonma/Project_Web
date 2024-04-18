@@ -1,6 +1,6 @@
 .container {
     text-align: center;
-    width: 1440px;
+    width: 1400px;
 }
 .bar{
     height: 50px;
@@ -10,7 +10,7 @@ body{
 }
 .information {
     margin-top: 3rem; 
-    width: 1440px;
+    width: 1400px;
     text-align: left;
     display: flex;
     justify-content: center; 
@@ -20,14 +20,14 @@ div {
     align-items: center;
 }
 .back_g{
-    width: 1440px;
+    width: 1400px;
     height: 720px;
     overflow: hidden;
     position: absolute;
     z-index: -1;
 }
 .back_g img{
-    width: 1440px;
+    width: 1400px;
     height: 790px;
     filter: brightness(2000%);
     filter: contrast(35%);
