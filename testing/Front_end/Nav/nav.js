@@ -86,10 +86,9 @@ class NavBar extends HTMLElement {
     .searchbox{
         flex: 1;
         display: flex;
-        justify-content: flex-left;
-        
-        padding: 0%;
-        boarder: 0%;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 2rem;
     
     }
 
