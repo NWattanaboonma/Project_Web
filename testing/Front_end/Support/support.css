@@ -1,7 +1,7 @@
 .container {
     text-align: center;
     margin-top: 3rem;
-    width: 1440px;
+    width: 1400px;
 }
 
 body{
@@ -10,7 +10,7 @@ body{
 .information {
     /* margin-top: 5%;  */
     top: 20rem;
-    width: 1440px;
+    width: 1400px;
     height: 650px;
     text-align: left;
     display: flex; 
@@ -24,14 +24,14 @@ div {
     align-items: center;
 }
 .back_g{
-    width: 1440px;
+    width: 1400px;
     height: 790px;
     overflow: hidden;
     position: absolute;
     z-index: -1;
 }
 .back_g img{
-    width: 1440px;
+    width: 1400px;
     height: 790px;
     filter: brightness(1500%);
     filter: contrast(45%);
