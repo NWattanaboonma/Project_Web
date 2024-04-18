@@ -23,7 +23,7 @@
 
 .AdvanceSearch input[type = "text"],
 .AdvanceSearch select {
-    width: calc(88% - 120px); 
+    width: calc(700px - 120px); 
     height: 40px;
     font-size: 16px;
     padding: 8px;
@@ -40,6 +40,6 @@
     border-radius: 50px;
     cursor: pointer;
     margin-top: 15px;
-    margin-left: 1100px; 
+    margin-left: 470px; 
     display: block; 
 }
