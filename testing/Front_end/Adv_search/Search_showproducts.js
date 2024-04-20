@@ -1,6 +1,6 @@
 // method that readying the data from dom
 document.addEventListener("DOMContentLoaded", function() {
-    const Data = localStorage.getItem("Search_Data");
+    const Data = localStorage.getItem("getData");
     console.log(Data)
     document.getElementById("ss").value=Data
 });

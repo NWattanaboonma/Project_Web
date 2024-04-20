@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("Sign_in").addEventListener("click", Registerform);
+  const fname = document.getElementById("Fame").value; // Corrected ID for Firstname input
+    const lname = document.getElementById("Lame").value; // Corrected ID for Lastname input
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("PW").value;
+    const birthdate = document.getElementById("bd").value; // Corrected casing for birthdate
+    const phone = document.getElementById("Pnumber").value;
+    const age = document.getElementById("age").value;
+    console.log(fname+lname+email+password)
+});
 function Registerform() {
     const fname = document.getElementById("Fame").value; // Corrected ID for Firstname input
     const lname = document.getElementById("Lame").value; // Corrected ID for Lastname input
@@ -7,16 +18,19 @@ function Registerform() {
     const phone = document.getElementById("Pnumber").value;
     const age = document.getElementById("age").value;
     console.log(fname+lname+email+password)
-    const userdata = {
-      "UserEmail": `${email}`,
-      "FName": fname,
-      "LName": lname, // Corrected casing for Lastname property
-      "UserPassword": password,
-      "Birthdate": birthdate,
-      "Phone": phone,
-      "Age": age
-    };
-    console.log(userdata)
+    // const userdata = {
+    //   "UserEmail": email,
+    //   "FName": fname,
+    //   "LName": lname, // Corrected casing for Lastname property
+    //   "UserPassword": password,
+    //   "Birthdate": birthdate,
+    //   "Phone": phone,
+    //   "Age": age
+    // };
+    // console.log(userdata)
+    // localStorage.setItem("getData",userdata);
+    
+    // window.location.href = "/Search_showproducts";
     // fetch('http://localhost:3030/form-submit', {
     //   method: 'POST',
     //   headers: {
