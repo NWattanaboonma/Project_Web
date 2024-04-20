@@ -16,12 +16,12 @@ class NavBar extends HTMLElement {
         <a href="/Support" class="line space_between white"> Support </a>
         </div>
         <div class="searchbox">
-        <form>
-        <a href="/Search_showproducts" ><input type="text" id="ss"  placeholder="Search" ></a>
-        </form> 
+        <from>
+        <input type="text" id="ss" placeholder="Search">
+        </from>
         <a href="/Advance-Search" class="btn">Advance Search</a> 
         <a href="/login" class="loginbutton lastspace"><img src="/Nav/Login_Page.png" class="Logo_size"></a> 
-        <a href="#" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a> 
+        <a href="/Edit" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a> 
         </div>
         </div>
     </nav > 
@@ -86,6 +86,7 @@ class NavBar extends HTMLElement {
     .searchbox{
         flex: 1;
         display: flex;
+        background-image: url('/css/searchicon.png');
         justify-content: flex-end;
         align-items: center;
         padding: 0 2rem;
@@ -175,8 +176,26 @@ class NavBar extends HTMLElement {
         display: flex;
         justify-content: space-evenly;
     }
-    </style>   
+    </style> 
         `;
+    // import than you can't put the html in from the scipt in the script using the document create the get script nect step using the append child to add the script element after innerhtml
+    const script = document.createElement('script');
+    // other import the data the get the element need to get all of it otherwirse the append child will not work
+    script.textContent = `
+    const inform = document.getElementById("ss");
+        console.log("Search is working");
+        inform.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                gotosearch(inform.value);
+            }
+        });
+
+        function gotosearch(data) {
+            localStorage.setItem("Search_Data",data);
+            window.location.href = "/Search_showproducts";
+        }
+    `;
+    this.appendChild(script);
     }
 }
 
@@ -201,3 +220,5 @@ class Footer extends HTMLElement {
 
 
 customElements.define('footer-component', Footer);
+
+
