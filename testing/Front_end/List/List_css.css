@@ -68,6 +68,7 @@ h1{
     font-size: 2rem;
 }
 #Add{
-    color: bisque;
-    float: right;
+    color: black;
+    right:-1083px;
+    position: relative;
 }
