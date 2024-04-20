@@ -18,6 +18,11 @@
 
 .AdvanceSearch div section{
     background-color: yellowgreen;
+    padding-top: 3rem;
+    padding-bottom: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -49,4 +54,9 @@
     cursor: pointer;
     float: right;
     margin-top: 3rem;
+}
+
+.imgproducts{
+    width: 70%;
+    height: 70%;
 }
