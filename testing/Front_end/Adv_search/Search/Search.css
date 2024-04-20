@@ -1,0 +1,27 @@
+.search-container {
+    margin-top: 20px;
+  }
+  .search-container input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .search-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  

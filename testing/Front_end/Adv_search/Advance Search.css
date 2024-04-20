@@ -1,0 +1,47 @@
+.AdvanceSearch {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.bar {
+    height: 50px;
+}
+
+.AdvanceSearch form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; 
+    height: 800px;
+}
+
+.AdvanceSearch label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 249px; 
+    display: block; 
+}
+
+.AdvanceSearch input[type = "text"],
+.AdvanceSearch select {
+    width: calc(700px - 120px); 
+    height: 40px;
+    font-size: 16px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.AdvanceSearch button {
+    padding: 14px;
+    background-color: #454444;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 470px; 
+    display: block; 
+    margin-bottom: 10px;
+}
