@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("ID:", id);
         console.log("Price:", price);
         console.log("Material:", material);
+
     }
-    searchButton.addEventListener("click", handleSearch);
+    searchButton.addEventListener("click", handleSearch());
 });
