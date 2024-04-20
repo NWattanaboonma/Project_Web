@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Details</title>
+    <link rel="stylesheet" href="/admin_detail.css">
+</head>
+<body>
+    <nav class="bar"></nav>
+    
+    <div class="container">
+        <div class="box_login">
+            <div class="head_login"><b>Admin Details</b></div>
+
+
+            <div>
+                <input type="text" placeholder="Search by ID" id="searchId">
+                <button onclick="searchAdmin()">Search</button>
+            </div>
+
+            <div id="adminDetails" style="display: none;">
+                <p><b>First Name:</b> <span id="firstName"></span></p>
+                <p><b>Last Name:</b> <span id="lastName"></span></p>
+                <p><b>Email:</b> <span id="email"></span></p>
+                <p><b>Birthdate:</b> <span id="birthdate"></span></p>
+                <p><b>Phone Number:</b> <span id="phoneNumber"></span></p>
+                <button onclick="updateAdmin()">Update</button>
+                <button onclick="deleteAdmin()">Delete</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+
+    <script src="admin_detail.js"></script>
+</body>
+</html>
