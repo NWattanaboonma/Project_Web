@@ -1,8 +1,10 @@
 body {
     background-color: white;
+    display: flex;
 }
 
 .choose-bar {
+    display: flex;
     background-color: black;
     color: white;
     text-align: center;
@@ -10,9 +12,10 @@ body {
     font-size: 18px;
 }
 
-.text {  
+.newtext {  
     display: flex;
-    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
     margin-top: 20px;
     width: 1400px;
     background-color: aqua;
