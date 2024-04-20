@@ -91,6 +91,7 @@ class NavBar extends HTMLElement {
         align-items: center;
         padding: 0 2rem;
         gap: 2rem;
+
     }
 
     .searchbox input{

@@ -1,4 +1,11 @@
-function showProducts(filteredProducts) {
+// method that readying the data from dom
+document.addEventListener("DOMContentLoaded", function() {
+    const Data = localStorage.getItem("Search_Data");
+    console.log(Data)
+    document.getElementById("ss").value=Data
+});
+
+function displayProducts(filteredProducts) {
     var productsContainer = document.querySelector(".products");
     productsContainer.innerHTML = ""; 
 
@@ -14,15 +21,20 @@ function showProducts(filteredProducts) {
         productsContainer.appendChild(productDiv);
     });
 }
+
 function searchProducts() {
     var nameInput = document.getElementById("nameInput").value.toLowerCase();
     var collectionInput = document.getElementById("collectionInput").value.toLowerCase();
     var colorInput = document.getElementById("colorInput").value.toLowerCase();
+
     var filteredProducts = products.filter(function(product) {
         return (
-            product.name.toLowerCase().includes(nameInput) && product.collection.toLowerCase().includes(collectionInput) && product.color.toLowerCase().includes(colorInput)
+            product.name.toLowerCase().includes(nameInput) &&
+            product.collection.toLowerCase().includes(collectionInput) &&
+            product.color.toLowerCase().includes(colorInput)
         );
     });
+
     displayProducts(filteredProducts);
 }
 displayProducts(products);
