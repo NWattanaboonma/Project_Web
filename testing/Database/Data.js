@@ -122,6 +122,25 @@ router.get('/product/:product_id', (req, res) => {
 // delete product
 
 // advance search
+router.post('/adsearch/:name/:color/:collection', (req, res) => {
+    const { name, color, collection } = req.body;
+
+    const query = `SELECT * FROM Product WHERE 
+        (Productname LIKE ? OR ? IS NULL) AND 
+        (Color LIKE ? OR ? IS NULL) AND 
+        (Collection LIKE ? OR ? IS NULL)`;
+
+    connection.query(query, [`%${name}%`, name || null, `%${color}%`, color || null, `%${collection}%`, collection || null], (error, results) => {
+        if (error) {
+            console.error('Error executing query:', error);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+
+        // Send back the query results as JSON response
+        res.json(results);
+    });
+});
+
 
 // search
 
