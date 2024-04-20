@@ -58,8 +58,9 @@ call('Register','Register.html','/Register');
 
 // 
 // search
+call('Search','Search.html','/Search');
 call('Adv_search','Advance Search.html','/Advance-Search');
-call('Adv_search','Search_showproducts.html','/Search_showproducts')
+call('Adv_search','Search_showproducts.html','/Search_showproducts');
 
 // Project_web.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});
