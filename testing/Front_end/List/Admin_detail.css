@@ -1,22 +1,19 @@
-/* Global Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #efe9e9;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .bar {
-    background-color: #333;
+    background-color: #efe9e9;
     height: 50px;
 }
 
@@ -24,42 +21,42 @@ body {
     margin-top: 20px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .head_login {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #363636;
     font-size: 24px;
 }
 
 .admin-detail {
-    margin-bottom: 30px; /* Add some space between admin details */
+    margin-bottom: 30px; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
 }
 
 .detail-line {
     display: flex;
     align-items: center;
-    margin-bottom: 15px; /* Add some space between detail lines */
+    margin-bottom: 15px; 
 }
 
 .detail-label {
     width: 120px;
     font-weight: bold;
-    color: #666;
+    color: black;
+    font-size: 18px;
 }
 
 .detail-value {
     flex: 1;
     padding: 10px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #f3ecec;
     font-size: 16px;
-    color: #333;
+    color: black;
     margin-left: 10px;
 }
 
@@ -68,21 +65,12 @@ button {
     border: none;
     background-color: black;
     color: white;
-    cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s ease;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: grey;
-}
-
-footer-component {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #666;
-    font-size: 14px;
 }

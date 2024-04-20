@@ -1,8 +1,8 @@
 // Sample data received from the backend
 let users = [
-    { id: 1, firstName: "John", lastName: "Doe", email: "john@example.com" },
-    { id: 2, firstName: "Jane", lastName: "Smith", email: "jane@example.com" },
-    { id: 3, firstName: "Alice", lastName: "Johnson", email: "alice@example.com" }
+    { Id: 1, FirstName: "Alex", LastName: "Doe", Email: "john@example.com" },
+    { Id: 2, FirstName: "Michele", LastName: "Smith", Email: "jane@example.com" },
+    { Id: 3, FirstName: "Jack", LastName: "Johnson", Email: "alice@example.com" }
 ];
 
 // Function to fetch user data from the backend (mocked for demonstration)
@@ -87,7 +87,7 @@ function updateUser(userId) {
 
 // Function to delete user
 function deleteUser(userId) {
-    const confirmDelete = confirm("Are you sure you want to delete this user?");
+    const confirmDelete = confirm("Are you sure you want to delete this account?");
     if (confirmDelete) {
         users = users.filter(user => user.id !== userId);
         displayUsers(users);
