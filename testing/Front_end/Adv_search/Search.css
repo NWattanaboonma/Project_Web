@@ -4,30 +4,29 @@
     width: 1400px;
     height: 650px;
     display: flex;
-    background-color: #454444;
 }
 
 .bar {
     height: 50px;
 }
 .AdvanceSearch div{
-    background-color: #ca2b2b;
-    width: 200px; 
+    width: 700px; 
     height: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.AdvanceSearch  div form {
-    
+.AdvanceSearch div section{
+    background-color: yellowgreen;
 }
-.AdvanceSearch section{
-    max-width: 50%;
-}
+
 
 .AdvanceSearch label {
-    margin-bottom: 10px;
+    padding: 2%;
+    padding-left: 0%;
     font-size: 18px;
-    width: 249px; 
-    display: block; 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .AdvanceSearch input[type = "text"],
@@ -48,8 +47,6 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    margin-top: 15px;
-    margin-left: 470px; 
-    display: block; 
-    margin-bottom: 10px;
+    float: right;
+    margin-top: 3rem;
 }
