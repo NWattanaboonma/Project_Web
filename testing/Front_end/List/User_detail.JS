@@ -58,10 +58,10 @@ function displayUsers(users) {
 // Function to update admin
 function updateUser(userId) {
     const userIndex = users.findIndex(user => user.id === userId);
-    const adminToUpdate = admins[adminIndex];
-    const newFirstName = prompt("Enter new first name:", adminToUpdate.firstName);
-    const newLastName = prompt("Enter new last name:", adminToUpdate.lastName);
-    const newEmail = prompt("Enter new email:", adminToUpdate.email);
+    const userToUpdate = users[userIndex];
+    const newFirstName = prompt("Enter new first name:", userToUpdate.firstName);
+    const newLastName = prompt("Enter new last name:", userToUpdate.lastName);
+    const newEmail = prompt("Enter new email:", userToUpdate.email);
 
     if (newFirstName && newLastName && newEmail) {
         users[userIndex] = {

@@ -1,3 +1,3 @@
-function updateadd(){
-    window.location.href="/User_detail";
+function updateuser(){
+    window.location.href="/user_detail";
 }
