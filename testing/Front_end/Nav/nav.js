@@ -86,7 +86,6 @@ class NavBar extends HTMLElement {
     .searchbox{
         flex: 1;
         display: flex;
-        background-image: url('/css/searchicon.png');
         justify-content: flex-end;
         align-items: center;
         padding: 0 2rem;
