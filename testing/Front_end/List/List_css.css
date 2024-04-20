@@ -50,3 +50,22 @@ h1{
     display: flex;
     justify-content: center;
 }
+.inform{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.Edit{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    height: fit-content;
+    font-size: 2rem;
+}
