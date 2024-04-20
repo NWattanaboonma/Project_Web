@@ -69,5 +69,6 @@ h1{
 }
 #Add{
     color: black;
-    margin-left: 1083px;
+    right:-1083px;
+    position: relative;
 }
