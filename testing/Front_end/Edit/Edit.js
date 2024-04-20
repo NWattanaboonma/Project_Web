@@ -6,7 +6,7 @@ function Change(id){
     }
     else if(id=="User"){
         console.log(id)
-        // window.location.href = "some url";
+        window.location.href = "/List_User";
     }
     else{
         console.log(id)

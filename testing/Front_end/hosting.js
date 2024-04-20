@@ -64,6 +64,9 @@ call('Adv_search','Search_showproducts.html','/Search_showproducts');
 
 // Password_Process
 call('Edit','Edit.html','/Edit');
+
+// List
+call('List','list_user.html','/List_User')
 // Project_web.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});
 
