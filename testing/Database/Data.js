@@ -5,22 +5,12 @@ const mysql = require('mysql2');
 const dotenv = require("dotenv");
 var cors = require('cors');
 const router = express.Router();
+dotenv.config();
+
+
+router.use(cors())
 app.use("/", router);
 
-const corsOptions = {
-    origin: 'http://localhost:2020', // Replace with your frontend domain in production
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization'], // Add allowed headers if needed
-    exposedHeaders: ['Content-Range'], // Add exposed headers if needed
-    credentials: true // Set to true if your frontend sends cookies or authorization headers
-  };
-  
-app.use(cors(corsOptions));  // Apply CORS middleware with options
-  
-
-
-// console.log("photo is joined ya")
-dotenv.config();
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
@@ -37,13 +27,16 @@ connection.connect(function(err){
     console.log(`Connected DB: ${process.env.MYSQL_DATABASE}`);
 });
 
-router.get('/', (req, res) => {
-    console.log('Request at /');
-    res.send('Hello World');
+router.get('/List_Admin', (req, res) => {
+    const sql = ' select * from Admins;';
+        connection.query( sql, function (error, results) {
+        if (error) throw error;
+            return res.send({ error: false, data: results});
+        });
 });
 
 //register (passsss)
-router.post('/form-submit', (req, res) => {
+router.post('/register', (req, res) => {
 
     const data = req.body.userData;
 

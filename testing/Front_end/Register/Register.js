@@ -1,56 +1,46 @@
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("Sign_in").addEventListener("click", Registerform);
-  const fname = document.getElementById("Fame").value; // Corrected ID for Firstname input
-    const lname = document.getElementById("Lame").value; // Corrected ID for Lastname input
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("PW").value;
-    const birthdate = document.getElementById("bd").value; // Corrected casing for birthdate
-    const phone = document.getElementById("Pnumber").value;
-    const age = document.getElementById("age").value;
-    console.log(fname+lname+email+password)
-});
-function Registerform() {
-    const fname = document.getElementById("Fame").value; // Corrected ID for Firstname input
-    const lname = document.getElementById("Lame").value; // Corrected ID for Lastname input
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("PW").value;
-    const birthdate = document.getElementById("bd").value; // Corrected casing for birthdate
-    const phone = document.getElementById("Pnumber").value;
-    const age = document.getElementById("age").value;
-    console.log(fname+lname+email+password)
-    // const userdata = {
-    //   "UserEmail": email,
-    //   "FName": fname,
-    //   "LName": lname, // Corrected casing for Lastname property
-    //   "UserPassword": password,
-    //   "Birthdate": birthdate,
-    //   "Phone": phone,
-    //   "Age": age
-    // };
-    // console.log(userdata)
-    // localStorage.setItem("getData",userdata);
-    
-    // window.location.href = "/Search_showproducts";
-    // fetch('http://localhost:3030/form-submit', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({ userData: userdata }) // Send userdata object directly
-    // })
-    //   .then(response => {
-    //     if (!response.ok) {
-    //       throw new Error('Failed to register user');
-    //     }
-    //     return response.json();
-    //   })
-    //   .then(data => {
-    //     console.log(data); // Handle successful response from the backend
-    //     // Update the UI or take further action if needed (e.g., clear form, show success message)
-    //   })
-    //   .catch(error => {
-    //     console.error('Error registering user:', error); // Handle error (e.g., display error message to user)
-    //   });
-  }
-  
+// For slow the process to see the console.log that our function is working
+// document.addEventListener("DOMContentLoaded", function() {
+//   document.getElementById("Sign_in").addEventListener("click", registerForm);
+// });
 
+function registerForm() {
+  const fname = document.getElementById("Fame").value; 
+  const lname = document.getElementById("Lame").value; 
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("PW").value;
+  const birthdate = document.getElementById("bd").value; 
+  const phone = document.getElementById("Pnumber").value;
+  const age = document.getElementById("age").value;
+  
+  const userdata = {
+    "UserEmail": email,
+    "FName": fname,
+    "LName": lname,
+    "UserPassword": password,
+    "Birthdate": birthdate,
+    "Phone": phone,
+    "Age": age
+  };
+
+  fetch('http://localhost:2021/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ userData: userdata })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to register user. Status: ' + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("try")
+    console.log(data); 
+  })
+  .catch(error => {
+    console.error('Error registering user:', error); 
+  });
+  
+}
