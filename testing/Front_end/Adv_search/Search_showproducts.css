@@ -12,25 +12,33 @@ body {
 
 .text {  
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: nowrap;
     margin-top: 20px;
-    text-align: left;
+    width: 1400px;
+    background-color: aqua;
 }
-
+.textbox{
+    width: 350px;
+    background-color: gray;
+    height: 500px;
+}
 .detail {
     text-align: center;
+    background-color: antiquewhite;
 }
 
-.imgproducts {
-    width: 350px;
+/* .line_box{
+    width: 1400px;
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+
+.imgproducts {
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-right: 950px; 
 }
 
 .buy {
