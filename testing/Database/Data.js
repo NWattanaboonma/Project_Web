@@ -7,12 +7,17 @@ var cors = require('cors');
 const router = express.Router();
 app.use("/", router);
 
-// let corsOptions = {
-//     origin: 'http://localhost:3030',
-//     methods: 'GET,POST,PUT,DELETE'
-// }
-// app.use(cors());
-// app.use(cors(corsOptions));
+const corsOptions = {
+    origin: 'http://localhost:2020', // Replace with your frontend domain in production
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization'], // Add allowed headers if needed
+    exposedHeaders: ['Content-Range'], // Add exposed headers if needed
+    credentials: true // Set to true if your frontend sends cookies or authorization headers
+  };
+  
+app.use(cors(corsOptions));  // Apply CORS middleware with options
+  
+
 
 // console.log("photo is joined ya")
 dotenv.config();
@@ -37,15 +42,10 @@ router.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-// register
-router.post('/register', (req, res) => {
+//register (passsss)
+router.post('/form-submit', (req, res) => {
 
-    const data = req.body.infor;
-
-    if (error) {
-        console.error('Error fetching shirt:', error);
-        return res.status(500).json({ message: 'Internal server error' });
-    }
+    const data = req.body.userData;
 
     if (!data) {
         return res.status(400).json({ error: true, message: 'Please provide user information' });
@@ -64,7 +64,11 @@ router.post('/register', (req, res) => {
     });
 });
 
-// login
+
+
+
+
+// login (passsss)
 router.post('/login/:email', (req, res) => {
     const email = req.params.email;
 
@@ -89,7 +93,7 @@ router.post('/login/:email', (req, res) => {
 });
 
 
-// detail product click image then pull information to front end
+// detail product click image then pull information to front end (passsss)
 router.get('/product/:product_id', (req, res) => { 
     const productId = req.params.product_id;
 
@@ -110,32 +114,9 @@ router.get('/product/:product_id', (req, res) => {
 
 
 // insert product *** fix / ***
-router.post('/product' , (req, res) => { 
-    const data = req.body.infor_p;
- 
-    if (error) {
-        console.error('Error fetching shirt:', error);
-        return res.status(500).json({ message: 'Internal server error' });
-    }
 
-    if (!data) {
-        return res.status(400).json({ error: true, message: 'Please provide product information' });
-    }
-
-    const sql = 'INSERT INTO Product SET ?';
-
-    connection.query(sql, data, (error, results) => {
-        if (error) {
-            console.error('Error inserting product:', error);
-            return res.status(500).json({ error: 'An error occurred while insert' });
-        } else {
-            console.log('User signed up successfully');
-            return res.status(201).json({ message: 'Product add successfully' });
-        }
-    });
-});
-
-
+  
+  
 // add product
 
 // delete product

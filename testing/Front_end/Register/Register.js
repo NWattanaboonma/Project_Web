@@ -1,39 +1,42 @@
-const express = require("express");
-const app = express();
-const path = require('path');
-const mysql = require('mysql2');
-const dotenv = require("dotenv");
-const router = express.Router();
-
-app.use("/", router);
-
-dotenv.config();
-
-var connection = mysql.createConnection({
-    // host : process.env.host,
-    // user : process.env.DB_user,
-    // password : process.env.DB_pass,
-    // database : process.env.DB_name
-});
-
-connection.connect(function(err){
-  if(err) throw err;
-  console.log(`Connected DB: ${process.env.DB_name}`);
-});
-
-function getResponses() {
-    let query = document.getElementById("name").value;
-    let rount = "https://api.spoonacular.com/recipes/complexSearch?apiKey="+"548b3572a843413cae59a2d5919afde6"+"&query="+query;
-    
-    fetch(rount)
-    .then((res)=> res.json())
-    .then((data)=>{
-    console.log(data);
-    document.querySelector("ul").innerHTML=" ";
-    for (let i=0;i<data.number;i++){
-        document.querySelector("ul").innerHTML += "<li><b>"+data.results[i].title+":</b></li>" + '<img src="'+data.results[i].image+'">';
-    }
-    })
-    }
-
+function Registerform() {
+    const fname = document.getElementById("Fame").value; // Corrected ID for Firstname input
+    const lname = document.getElementById("Lame").value; // Corrected ID for Lastname input
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("PW").value;
+    const birthdate = document.getElementById("bd").value; // Corrected casing for birthdate
+    const phone = document.getElementById("Pnumber").value;
+    const age = document.getElementById("age").value;
+    console.log(fname+lname+email+password)
+    const userdata = {
+      "UserEmail": `${email}`,
+      "FName": fname,
+      "LName": lname, // Corrected casing for Lastname property
+      "UserPassword": password,
+      "Birthdate": birthdate,
+      "Phone": phone,
+      "Age": age
+    };
+    console.log(userdata)
+    // fetch('http://localhost:3030/form-submit', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({ userData: userdata }) // Send userdata object directly
+    // })
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error('Failed to register user');
+    //     }
+    //     return response.json();
+    //   })
+    //   .then(data => {
+    //     console.log(data); // Handle successful response from the backend
+    //     // Update the UI or take further action if needed (e.g., clear form, show success message)
+    //   })
+    //   .catch(error => {
+    //     console.error('Error registering user:', error); // Handle error (e.g., display error message to user)
+    //   });
+  }
+  
 
