@@ -2,7 +2,7 @@
 function fetchAdminData() {
     // Mocked admin data from the backend
     const admins = [
-        { id: 1, firstName: "John", lastName: "Doe", email: "john@example.com" },
+        { Id: 1, FirstName: "John", LastName: "Doe", Email: "john@example.com" },
         { id: 2, firstName: "Jane", lastName: "Smith", email: "jane@example.com" },
         { id: 3, firstName: "Alice", lastName: "Johnson", email: "alice@example.com" }
     ];   // delete later
@@ -65,8 +65,8 @@ function updateAdmin(adminId) {
 
     if (newFirstName && newLastName && newEmail) {
         admins[adminIndex] = {
-            ...adminToUpdate,
-            firstName: newFirstName,
+            adminToUpdate,
+            irstName: newFirstName,
             lastName: newLastName,
             email: newEmail
         };

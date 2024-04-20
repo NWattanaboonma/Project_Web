@@ -1,22 +1,19 @@
-/* Global Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #efe9e9;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .bar {
-    background-color: #333;
+    background-color: #efe9e9;
     height: 50px;
 }
 
@@ -24,52 +21,56 @@ body {
     margin-top: 20px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .head_login {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #363636;
     font-size: 24px;
 }
 
-#userTable {
-    width: 100%;
-    border-collapse: collapse;
+.admin-detail {
+    margin-bottom: 30px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
 }
 
-#userTable th, #userTable td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+.detail-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; 
 }
 
-#userTable th {
-    background-color: #f2f2f2;
+.detail-label {
+    width: 120px;
     font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+.detail-value {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f3ecec;
+    font-size: 16px;
+    color: black;
+    margin-left: 10px;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-
-footer-component {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #666;
-    font-size: 14px;
+    background-color: grey;
 }
