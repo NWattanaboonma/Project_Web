@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Details</title>
-    <!-- <link rel="stylesheet" href="/admin_detail.css"> -->
+    <link rel="stylesheet" href="/admin_detail.css">
 </head>
 <body>
     <nav class="bar"></nav>
@@ -13,20 +13,27 @@
         <div class="box_login">
             <div class="head_login"><b>Admin Details</b></div>
 
-
-            <div>
-                <input type="text" placeholder="Search by ID" id="searchId">
-                <button onclick="searchAdmin()">Search</button>
-            </div>
-
-            <div id="adminDetails" style="display: none;">
-                <p><b>First Name:</b> <span id="firstName"></span></p>
-                <p><b>Last Name:</b> <span id="lastName"></span></p>
-                <p><b>Email:</b> <span id="email"></span></p>
-                <p><b>Birthdate:</b> <span id="birthdate"></span></p>
-                <p><b>Phone Number:</b> <span id="phoneNumber"></span></p>
-                <button onclick="updateAdmin()">Update</button>
-                <button onclick="deleteAdmin()">Delete</button>
+            <div id="adminDetails">
+                <div class="detail-line">
+                    <div class="detail-label">First Name:</div>
+                    <div class="detail-value" id="firstName"></div>
+                </div>
+                <div class="detail-line">
+                    <div class="detail-label">Last Name:</div>
+                    <div class="detail-value" id="lastName"></div>
+                </div>
+                <div class="detail-line">
+                    <div class="detail-label">Email:</div>
+                    <div class="detail-value" id="Email"></div>
+                </div>
+                <div class="detail-line">
+                    <div class="detail-label">Date of Birth:</div>
+                    <div class="detail-value" id="Date of Birth"></div>
+                </div>
+                <div class="detail-line">
+                    <div class="detail-label">Phone number:</div>
+                    <div class="detail-value" id="Phone number"></div>
+                </div>
             </div>
             
         </div>
@@ -34,6 +41,6 @@
 
     <footer-component></footer-component>
 
-    <!-- <script src="admin_detail.js"></script> -->
+    <script src="admin_detail.js"></script>
 </body>
 </html>
