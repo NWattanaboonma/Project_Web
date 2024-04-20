@@ -1,0 +1,33 @@
+.box{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(26, 24, 24);
+    height: 800px;
+    align-items: center;
+    gap: 4rem;
+}
+.box button{
+    font-size: 4rem;
+    width: 80rem;
+    height: 14rem;
+    border-radius: 12%;
+}
+
+#Ad{
+    background-color: antiquewhite;
+}
+#Ad:hover{
+    background-color: green;
+}
+#User{
+    background-color: antiquewhite;
+}
+#User:hover{
+    background-color: green;
+}
+#Product{
+    background-color: antiquewhite;
+}
+#Product:hover{
+    background-color: green;
+}

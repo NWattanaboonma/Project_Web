@@ -21,7 +21,7 @@ class NavBar extends HTMLElement {
         </from>
         <a href="/Advance-Search" class="btn">Advance Search</a> 
         <a href="/login" class="loginbutton lastspace"><img src="/Nav/Login_Page.png" class="Logo_size"></a> 
-        <a href="#" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a> 
+        <a href="/Edit" class="tbars lastspace"><img src="/Nav/Line_admins.png" class="Logo_size"></a> 
         </div>
         </div>
     </nav > 
