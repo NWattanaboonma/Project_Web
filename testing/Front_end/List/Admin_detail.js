@@ -6,8 +6,6 @@ function fetchAdminData() {
         { id: 2, firstName: "Jane", lastName: "Smith", email: "jane@example.com" },
         { id: 3, firstName: "Alice", lastName: "Johnson", email: "alice@example.com" }
     ];
-
-    // Call the function to display admin details
     displayAdmins(admins);
 }
 
