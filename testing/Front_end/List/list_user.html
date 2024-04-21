@@ -6,6 +6,7 @@
     <title>List_User</title>
     <script src="/Nav/nav.js"></script>
     <link rel="stylesheet" href="/List_css.css">
+    <script src="list_user.js"></script>
 </head>
 
 <body>
@@ -15,23 +16,23 @@
 
     <div class="div_center">
         <div class="container">
-            <button id="Add">Add</button>
             <div class="header">
-                <div class="Num">Name</div>
+                <div class="Num">List</div>
                 <div class="inform">Information of User</div>
                 <div class="Edit">Edit</div>
             </div>
-                <ul id="list">
-                </ul>
+                <div id="list">
+                </div>
             </div>
         </div>
     </div>
             
 <footer-component></footer-component>
 <script>
-function updateuser(){
-    window.location.href="/user_list";
-}
+    document.addEventListener("DOMContentLoaded", function() {
+        using(); 
+    });
+    
 </script>
 
 </body>
