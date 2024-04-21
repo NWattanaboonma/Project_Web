@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Fetch the product details based on product ID from the URL
     const productId = getProductIdFromURL();
     fetchProductDetails(productId);
 });
@@ -14,13 +13,10 @@ function fetchProductDetails(productId) {
     })
     .then(result => result.json())
     .then(data => {
-        // Populate the form with product details
-        document.getElementById("productImageSize").value = data.imageSize;
         document.getElementById("productName").value = data.name;
         document.getElementById("collectionName").value = data.collection;
         document.getElementById("productColor").value = data.color;
         document.getElementById("productPrice").value = data.price;
-        // Populate other fields if needed
     })
     .catch(error => {
         console.error('Error fetching product details:', error); 
@@ -29,7 +25,8 @@ function fetchProductDetails(productId) {
 
 document.getElementById("editForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
-    
+
+    // Get updated product details from form
     const updatedName = document.getElementById("productName").value;
     const updatedCollection = document.getElementById("collectionName").value;
     const updatedColor = document.getElementById("productColor").value;
@@ -44,8 +41,6 @@ document.getElementById("editForm").addEventListener("submit", function(event) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            imageUrl: updatedImageURL,
-            imageSize: updatedImageSize,
             name: updatedName,
             collection: updatedCollection,
             color: updatedColor,
@@ -57,8 +52,6 @@ document.getElementById("editForm").addEventListener("submit", function(event) {
         if (!response.ok) {
             throw new Error('Error updating product:', response.status);
         }
-        // Product updated successfully, update the displayed image
-        document.getElementById("productImage").src = updatedImageURL;
         alert("Product updated successfully!");
     })
     .catch(error => {
@@ -79,7 +72,6 @@ document.getElementById("deleteBtn").addEventListener("click", function() {
             if (!response.ok) {
                 throw new Error('Error deleting product:', response.status);
             }
-            // Product deleted successfully, you can redirect to another page or show a success message
             alert("Product deleted successfully!");
             // Redirect to home page or any other page after successful deletion
             window.location.href = "index.html";
