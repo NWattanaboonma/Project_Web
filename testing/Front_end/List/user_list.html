@@ -17,15 +17,15 @@
             <div class="head_login"><b>User Information</b></div>
 
             <div id="userDetails"></div>
-            <div class="add-user-form">
+            <form class="add-user-form">
                 <input type="text" placeholder="First Name" id="newFirstName">
                 <input type="text" placeholder="Last Name" id="newLastName">
                 <input type="email" placeholder="Email" id="newEmail">
                 <input type="number" placeholder="Age" id="newAge">
                 <input type="text" placeholder="Phone Number" id="newPhoneNumber">
-                <button onclick="updateuser()">Update</button>
-                <button onclick="deleteuser()">Delete</button>
-            </div>
+                <button type="submit" onclick="updateUser()">Update</button>
+                <button type="submit" onclick="deleteuser()">Delete</button>
+            </form>
         </div>
     </div>
 
