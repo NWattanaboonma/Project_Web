@@ -12,3 +12,13 @@ body{
 .Head{
     font-size: 24px;
 }
+.center{
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.center label{
+    width: 100%;
+}
