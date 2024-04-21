@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
 function updateuser() {
     // Get user information from input fields
     const email = localStorage.getItem("User_id")
