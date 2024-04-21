@@ -1,20 +1,9 @@
-// Sample data received from the backend
-let users = [
-    { ID: "91651", FirstName: "Eak", LastName: "Eak", Email: "eak@gmail.com" },
-    { ID: "28682", FirstName: "Mook", LastName: "Mook", Email: "mook@gmail.com" },
-    { ID: "26273", FirstName: "Mind", LastName: "Mind", Email: "mind@gmail.com" }
-];//delete later na ja
-
 function fetchUserData() {
-    displayUsers(users); //delete later na ja 
+    displayUsers(users); 
 }
 function displayUsers(users) {
     const userDetailsContainer = document.getElementById("userDetails");
-
-    // Clear previous content
     userDetailsContainer.innerHTML = "";
-
-    // Loop through each user and create user details
     users.forEach(user => {
         const userDetailDiv = document.createElement("div");
         userDetailDiv.classList.add("user-detail");
@@ -70,9 +59,7 @@ function addUser() {
         document.getElementById("newFirstName").value = "";
         document.getElementById("newLastName").value = "";
         document.getElementById("newEmail").value = "";
-    } else {
-        alert("Please fill out all fields.");
-    }
+    } 
 }
 
 function updateUser(userId) {
@@ -101,5 +88,4 @@ function deleteUser(userId) {
     }
 }
 
-// Call the function to fetch user data from the backend
 fetchUserData();
