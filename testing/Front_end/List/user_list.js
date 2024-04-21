@@ -39,7 +39,7 @@ function updateuser() {
  // const email = document.getElementById("newEmail").value;
     const userData = {
         "FName": firstName,
-        "FName": lastName,
+        "LName": lastName,
         "Age": age,
         "Phone": phone
     };
