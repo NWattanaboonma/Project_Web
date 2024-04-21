@@ -86,7 +86,7 @@ router.post('/login/:email', (req, res) => {
 });
 
 
-// detail product click image then pull information to front end (passsss)
+// select :detail product click image then pull information to front end (passsss)
 router.get('/product/:product_id', (req, res) => { 
     const productId = req.params.product_id;
 
@@ -105,37 +105,120 @@ router.get('/product/:product_id', (req, res) => {
     });
 });
 
+// select all Product
+router.get('/AllProduct', (req, res) => {
+    connection.query("Select * from Product", function (error, results) {
+        if (error) throw error;
+        return res.send({ error: false, data: results, message: 'Product list.' });
+    });
+});
 
 // insert product *** fix / ***
 
   
-  
-// add product
+// update product (from table product)(pass)
+router.put('/updateProduct', (req,res) => {
+   const product_id = req.body.id;
+   const product = req.body.userData;
 
-// delete product
+   if (!product_id || !product) {
+        return res.status(400).send({ error: product, message: 'Please provide Product information' }); }
+    connection.query("UPDATE Product set ? WHERE ProductID = ?",[product,product_id], function (error, results) {
+        if (error) throw error;
+        return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
+    });
+});
 
-// advance search
+// update product in stock can update follow by stockID 
+router.put('/updateStock', (req,res) => {
+    const stock_id = req.body.id;
+    const stock = req.body.userData;
+ 
+    if (!stock_id || !stock) {
+         return res.status(400).send({ error: stock, message: 'Please provide Product information' }); }
+     connection.query("UPDATE Stock set ? WHERE StockID = ?",[stock,stock_id], function (error, results) {
+         if (error) throw error;
+         return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
+     });
+ });
+
+// delete product (from stock and product table)
+router.delete('/deleteProduct', (req,res) =>{
+  const product_id = req.body.id;
+
+  if (!product_id){
+    return res.status(400).send({ error: true, message: 'Please provide product_id' });
+  }
+  connection.query('DELETE FROM Stock WHERE ProductID = ?', [product_id], function (error, results) {
+    if (error) throw error;
+    return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted from "Stock" successfully.' });
+  });
+  connection.query('DELETE FROM Product WHERE ProductID = ?',[product_id],function (error, results) {
+    if (error) throw error;
+    return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted successfully.' });
+  });
+});
+
+// advance search (passs)
 router.post('/adsearch/:name/:color/:collection', (req, res) => {
-    const { name, color, collection } = req.body;
+    const { name, color, collection } = req.params;
+  
+    const sql = `
+      SELECT * FROM Product 
+      WHERE ProductName LIKE ? AND Color LIKE ? AND Collection LIKE ?
+    `;
 
-    const query = `SELECT * FROM Product WHERE 
-        (Productname LIKE ? OR ? IS NULL) AND 
-        (Color LIKE ? OR ? IS NULL) AND 
-        (Collection LIKE ? OR ? IS NULL)`;
+    const params = [`%${name}%`, `%${color}%`, `%${collection}%`];
 
-    connection.query(query, [`%${name}%`, name || null, `%${color}%`, color || null, `%${collection}%`, collection || null], (error, results) => {
+    connection.query(sql, params, (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             return res.status(500).json({ error: 'Internal Server Error' });
         }
+        
+        if (results.length === 0) {
+            return res.status(404).json({ error: true, message: 'No products found' });
+        }
 
-        // Send back the query results as JSON response
-        res.json(results);
+        res.json({ error: false, data: results, message: 'Products search successful' });
+    });
+});
+
+// insert admin 
+router.post('/ad', (req, res) => {
+    let student = req.body.student;
+    console.log(student);
+
+    if (!student) {
+        return res.status(400).send({ error: true, message: 'Please provide studentinformation' });
+    }
+    connection.query("INSERT INTO personal_info SET ? ", student, function (error, results) {
+        if (error) throw error;
+        return res.send({error: false, data: results.affectedRows, message: 'New student has beencreated successfully.'});
     });
 });
 
 
+// select admin
+
+// select allAdmin
+
+// update admin
+
+// delete admin
+
+// insert user 
+
+// select user
+
+// select allAUser
+
+// update user
+
+// delete user
+
 // search
+
 
 app.listen(process.env.PORT, function() {
     console.log("Server listening at Port " 
