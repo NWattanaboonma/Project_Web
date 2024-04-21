@@ -29,7 +29,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
-    flex-grow: 2;
+    text-align: center;
 }
 
 .textbox2{
@@ -40,6 +40,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .textbox3{
     display: flex;
@@ -49,6 +50,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 
 .textbox4{
@@ -59,6 +61,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .textbox5{
     display: flex;
@@ -68,6 +71,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .textbox6{
     display: flex;
@@ -77,6 +81,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .textbox7{
     display: flex;
@@ -86,6 +91,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .textbox8{
     display: flex;
@@ -95,6 +101,7 @@ body {
     height: 50%;
     justify-content: center;
     align-items: baseline;
+    text-align: center;
 }
 .detail {
     text-align: center;
