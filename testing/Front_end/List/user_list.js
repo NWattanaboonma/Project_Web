@@ -1,37 +1,40 @@
 // Sample data received from the backend
 let users = [
-    { Id: 1, FirstName: "Alex", LastName: "Doe", Email: "john@example.com" },
-    { Id: 2, FirstName: "Michele", LastName: "Smith", Email: "jane@example.com" },
-    { Id: 3, FirstName: "Jack", LastName: "Johnson", Email: "alice@example.com" }
-];
+    { ID: "91651", FirstName: "Eak", LastName: "Eak", Email: "eak@gmail.com" },
+    { ID: "28682", FirstName: "Mook", LastName: "Mook", Email: "mook@gmail.com" },
+    { ID: "26273", FirstName: "Mind", LastName: "Mind", Email: "mind@gmail.com" }
+];//delete later na ja
 
-// Function to fetch user data from the backend (mocked for demonstration)
 function fetchUserData() {
-    displayUsers(users);
+    displayUsers(users); //delete later na ja 
 }
-
-// Function to display user details in the frontend
 function displayUsers(users) {
-    const userTableBody = document.getElementById("userTableBody");
+    const userDetailsContainer = document.getElementById("userDetails");
 
     // Clear previous content
-    userTableBody.innerHTML = "";
+    userDetailsContainer.innerHTML = "";
 
-    // Loop through each user and create table rows
+    // Loop through each user and create user details
     users.forEach(user => {
-        const row = userTableBody.insertRow();
+        const userDetailDiv = document.createElement("div");
+        userDetailDiv.classList.add("user-detail");
 
-        // Insert cells for firstName, lastName, and email
-        const firstNameCell = row.insertCell();
-        firstNameCell.textContent = user.firstName;
-
-        const lastNameCell = row.insertCell();
-        lastNameCell.textContent = user.lastName;
-
-        const emailCell = row.insertCell();
-        emailCell.textContent = user.email;
-
-        // Create update and delete buttons
+        // Loop through each property of the user and create detail lines
+        for (let key in user) {
+            if (key !== 'id') {
+                const detailLineDiv = document.createElement("div");
+                detailLineDiv.classList.add("detail-line");
+                const detailLabelDiv = document.createElement("div");
+                detailLabelDiv.classList.add("detail-label");
+                detailLabelDiv.textContent = key;
+                const detailValueDiv = document.createElement("div");
+                detailValueDiv.classList.add("detail-value");
+                detailValueDiv.textContent = user[key];
+                detailLineDiv.appendChild(detailLabelDiv);
+                detailLineDiv.appendChild(detailValueDiv);
+                userDetailDiv.appendChild(detailLineDiv);
+            }
+        }
         const updateButton = document.createElement("button");
         updateButton.textContent = "Update";
         updateButton.classList.add("update-btn");
@@ -42,31 +45,36 @@ function displayUsers(users) {
         deleteButton.classList.add("delete-btn");
         deleteButton.addEventListener("click", () => deleteUser(user.id));
 
-        const actionsCell = row.insertCell();
-        actionsCell.appendChild(updateButton);
-        actionsCell.appendChild(deleteButton);
+        userDetailDiv.appendChild(updateButton);
+        userDetailDiv.appendChild(deleteButton);
+
+        userDetailsContainer.appendChild(userDetailDiv);
     });
 }
 
-// Function to add a new user
 function addUser() {
-    const firstName = prompt("Enter first name:");
-    const lastName = prompt("Enter last name:");
-    const email = prompt("Enter email:");
+    const newFirstName = document.getElementById("newFirstName").value;
+    const newLastName = document.getElementById("newLastName").value;
+    const newEmail = document.getElementById("newEmail").value;
 
-    if (firstName && lastName && email) {
+    if (newFirstName && newLastName && newEmail) {
         const newUser = {
-            id: users.length + 1, // Generating a new ID for the new user
-            firstName,
-            lastName,
-            email
+            id: users.length + 1,
+            firstName: newFirstName,
+            lastName: newLastName,
+            email: newEmail
         };
         users.push(newUser);
         displayUsers(users);
+        // Clear input fields
+        document.getElementById("newFirstName").value = "";
+        document.getElementById("newLastName").value = "";
+        document.getElementById("newEmail").value = "";
+    } else {
+        alert("Please fill out all fields.");
     }
 }
 
-// Function to update user
 function updateUser(userId) {
     const userIndex = users.findIndex(user => user.id === userId);
     const userToUpdate = users[userIndex];
@@ -85,7 +93,6 @@ function updateUser(userId) {
     }
 }
 
-// Function to delete user
 function deleteUser(userId) {
     const confirmDelete = confirm("Are you sure you want to delete this account?");
     if (confirmDelete) {

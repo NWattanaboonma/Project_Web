@@ -1,3 +1,3 @@
 function updateuser(){
-    window.location.href="/user_detail";
+    window.location.href="/list_user.html";
 }
