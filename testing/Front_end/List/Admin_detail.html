@@ -13,37 +13,34 @@
     <navbar-component></navbar-component>
     <nav class="bar"></nav>
     
-    <div class="container">
-        <div class="box_login">
-            <div class="head_login"><b>Admin Details</b></div>
-
-            <div id="adminDetails">
-                <div class="detail-line">
-                    <div class="detail-label">First Name:</div>
-                    <div class="detail-value" id="firstName"></div>
-                </div>
-                <div class="detail-line">
-                    <div class="detail-label">Last Name:</div>
-                    <div class="detail-value" id="lastName"></div>
-                </div>
-                <div class="detail-line">
-                    <div class="detail-label">Email:</div>
-                    <div class="detail-value" id="Email"></div>
-                </div>
-                <div class="detail-line">
-                    <div class="detail-label">Date of Birth:</div>
-                    <div class="detail-value" id="Date of Birth"></div>
-                </div>
-                <div class="detail-line">
-                    <div class="detail-label">Phone number:</div>
-                    <div class="detail-value" id="Phone number"></div>
-                </div>
-                <button id="updateBtn" class="update-btn">Update</button>
-                <button id="deleteBtn" class="delete-btn">Delete</button>
+    <from class="contain">
+        <div class="head_login"><b>Admin Details</b></div>
+        <!-- <div class="box_login"> -->
+            <div class="detail-line">
+                <div class="detail-label">First Name:</div>
+                <input class="detail-value" id="firstName">
             </div>
-            
-        </div>
-    </div>
+            <div class="detail-line">
+                <div class="detail-label">Last Name:</div>
+                <input class="detail-value" id="lastName"></div>
+            </div>    
+            <div class="detail-line">
+                <div class="detail-label">Date of Birth:</div>
+                <input class="detail-value" id="Date of Birth"></div>
+            </div>    
+            <div class="detail-line">
+                <div class="detail-label">Phone number:</div>
+                <input class="detail-value" id="Phone number"></div>
+            </div>  
+            <div class="detail-line">
+                <div class="detail-label">Email:</div>
+                <input class="detail-value" id="Email"></div>
+            </div>   
+        <!-- </div>    -->
+        <button id="updateBtn" class="update-btn">Update</button>
+        <button id="deleteBtn" class="delete-btn">Delete</button>
+        </from>
+        
 
     <footer-component></footer-component>
 
