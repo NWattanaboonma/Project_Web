@@ -126,7 +126,7 @@ router.get('/AllProduct', (req, res) => {
 // insert product *** fix / ***
 
   
-// update product (from table product)(pass)
+// update product (from table product) (can not use)
 router.put('/updateProduct', (req,res) => {
    const product_id = req.body.id;
    const product = req.body.userData;
@@ -195,37 +195,138 @@ router.post('/adsearch/:name/:color/:collection', (req, res) => {
 });
 
 // insert admin 
-router.post('/ad', (req, res) => {
-    let student = req.body.student;
-    console.log(student);
+router.post('/insertAdmin', (req, res) => {
+    let admin = req.body.admin;
 
-    if (!student) {
-        return res.status(400).send({ error: true, message: 'Please provide studentinformation' });
+    if (!admin) {
+        return res.status(400).send({ error: true, message: 'Please provide Admin information' });
     }
-    connection.query("INSERT INTO personal_info SET ? ", student, function (error, results) {
+    connection.query("INSERT INTO Admins SET ? ", admin, function (error, results) {
         if (error) throw error;
-        return res.send({error: false, data: results.affectedRows, message: 'New student has beencreated successfully.'});
+        return res.send({error: false, data: results.affectedRows, message: 'New admid has been created successfully.'});
+    });
+});
+
+// select admin
+router.get('/admin/:adminID', (req, res) => {
+    const adminId = req.params.adminID;
+
+    connection.query('SELECT * FROM Admins WHERE AdminID = ?', adminId, function (error, results) {
+        if (error) {
+            console.error('Error fetching product:', error.message);
+            return res.status(500).json({ error: true, message: 'An error occurred', details: error.message }); 
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: 'Admin not found' });
+        }
+
+        const product = results[0]; 
+        return res.status(200).json({ error: false, data: product, message: 'Admin retrieved successfully' }); 
+    });
+});
+
+// select allAdmin
+router.get('/AllAdmin', (req, res) => {
+    connection.query("Select * from Admins", function (error, results) {
+        if (error) throw error;
+        return res.send({ error: false, data: results, message: 'Admin list.' });
+    });
+});
+
+// update admin
+router.put('/updateAdmin', (req,res) => {
+    const admin_id = req.body.id;
+    const admin = req.body.adminData;
+ 
+    if (!admin_id || !admin) {
+         return res.status(400).send({ error: admin, message: 'Please provide Admin information' }); }
+     connection.query("UPDATE Admins set ? WHERE AdminID = ?",[admin,admin_id], function (error, results) {
+         if (error) throw error;
+         return res.send({error: false, data: results.affectedRows, message: 'Admin has been updated successfully.'})
+     });
+ });
+
+// delete admin
+router.delete('/deleteAdmin/:id', (req,res) =>{
+    const admin_id = req.params.id;
+  
+    if (!admin_id){
+      return res.status(400).send({ error: true, message: 'Please provide admin_id' });
+    }
+    connection.query('DELETE FROM Admins WHERE AdminID = ?', [admin_id], function (error, results) {
+      if (error) throw error;
+      return res.send({ error: false, data: results.affectedRows, message: 'Admin has been deleted from successfully.'});
     });
 });
 
 
-// select admin
-
-// select allAdmin
-
-// update admin
-
-// delete admin
-
 // insert user 
+router.post('/insertUser', (req, res) => {
+    let user = req.body.userData;
+
+    if (!user) {
+        return res.status(400).send({ error: true, message: 'Please provide User information' });
+    }
+    connection.query("INSERT INTO Users SET ? ", user, function (error, results) {
+        if (error) throw error;
+        return res.send({error: false, data: results.affectedRows, message: 'New user has been created successfully.'});
+    });
+});
 
 // select user
+router.get('/User/:userMail', (req, res) => {
+    const userMail = req.params.usermail;
+
+    connection.query('SELECT * FROM Users WHERE UserEmail = ?', userMail, function (error, results) {
+        if (error) {
+            console.error('Error fetching product:', error.message);
+            return res.status(500).json({ error: true, message: 'An error occurred', details: error.message }); 
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const product = results[0]; 
+        return res.status(200).json({ error: false, data: product, message: 'User retrieved successfully' }); 
+    });
+});
+
 
 // select allAUser
+router.get('/AllUsers', (req, res) => {
+    connection.query("Select * from Users", function (error, results) {
+        if (error) throw error;
+        return res.send({ error: false, data: results, message: 'User list.' });
+    });
+});
 
 // update user
+router.put('/updateUser', (req,res) => {
+    const user_email = req.body.email;
+    const user = req.body.userData;
+ 
+    if (!user_email || !user) {
+         return res.status(400).send({ error: user, message: 'Please provide User information' }); }
+     connection.query("UPDATE Users set ? WHERE UserEmail = ?",[user,user_email], function (error, results) {
+         if (error) throw error;
+         return res.send({error: false, data: results.affectedRows, message: 'User has been updated successfully.'})
+     });
+ });
 
 // delete user
+router.delete('/deleteUser/:email', (req,res) =>{
+    const user_email = req.params.email;
+  
+    if (!user_email){
+      return res.status(400).send({ error: true, message: 'Please provide user_email' });
+    }
+    connection.query('DELETE FROM Users WHERE UserEmail = ?', [user_email], function (error, results) {
+      if (error) throw error;
+      return res.send({ error: false, data: results.affectedRows, message: 'User has been deleted from successfully.'});
+    });
+});
 
 // search
 
