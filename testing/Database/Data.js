@@ -278,9 +278,9 @@ router.post('/insertUser', (req, res) => {
 });
 
 // select user
-router.get('/User/:userMail', (req, res) => {
-    const userMail = req.params.usermail;
-
+router.post('/User', (req, res) => {
+    
+    const userMail = req.body.id;
     connection.query('SELECT * FROM Users WHERE UserEmail = ?', userMail, function (error, results) {
         if (error) {
             console.error('Error fetching product:', error.message);

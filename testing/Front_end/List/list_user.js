@@ -1,28 +1,3 @@
-/* <div class="box">
-                <div id="number">1</div>
-                <div id="User_data">
-                    <p>Manow is name email humasdasjkdnkajsds ojasndoidas asosidjoias sfla;ksdmfkdmslfmd;klmasdfdsf
-                        adsfasdas
-                        adsfasdas
-                        adsfasdasd
-                        fasd
-                        <fieldset>sdf
-                            asd
-                            
-                            <aside><datagrid>fieldset
-                                sdfs
-                                <datagrid><a href=""></a></datagrid>
-                            </datagrid></aside>
-                        </fieldset>
-                        
-                    </p>
-                </div>
-                <button id="Detail"onclick="updateuser()"></a>
-                    Detail
-                    
-                </button> */
-                
-
 function using(){
   fetch('http://localhost:2021/List_User', {
     method: 'GET',
@@ -42,6 +17,7 @@ function using(){
       const email=List.UserEmail
       const Call = List.Phone
       const Age= List.Age
+      const ID = String("'"+email+"'")
     //   const Bt= List.Birthdate
       document.getElementById("list").innerHTML+=`
       <div class='box'>
@@ -49,7 +25,7 @@ function using(){
       <div id="User_Data">
         <p>${firstname} ${lastname} (Contact: <span class="color_it">${Call}</span>) Age:${Age} email: <a href = "mailto: ${email}" >${email}</a></p>
       </div>
-      <button id="Detail" onclick="updateuser()">Detail</button>
+      <button id="Detail" onclick="updateuser(${ID})">Detail</button>
       </div>
     `;
     }
@@ -59,6 +35,8 @@ function using(){
 });
 
 }         
-function updateuser(){
+function updateuser(infro){
+    console.log(infro)
+    localStorage.setItem("User_id",infro);
     window.location.href="/user_list";
 }    

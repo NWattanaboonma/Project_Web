@@ -36,7 +36,6 @@ function logincheck() {
     return response.json();
   })
   .then(data => {
-    console.log("try")
     console.log(data); 
   })
   .catch(error => {
