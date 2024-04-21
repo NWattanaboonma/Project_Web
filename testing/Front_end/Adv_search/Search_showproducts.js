@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // console.log(data); 
             const infro = data.data;
             var Check=true;
-            // console.log(infro);
+            console.log(infro);
             for (var i=0;i<infro.length;i++){
                 const List=infro[i]
                 const Name = List.ProductName
@@ -23,7 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if(Data===Name){
                     Check=false;
-                    console.log("Name")
+                    // <div class="textbox1">
+                    //     <img src="https://drive.google.com/thumbnail?id=1uZycBw4U-fPuwQcq5VmWrw5Qt3r0ohay" class="imgproducts">
+                    //     <div class="detail">
+                    //         <h3><b>Mr.Bloom<br>(graphic t-shirt)</b></h3>
+                    //         <h3>Black</h3>
+                    //         <h3>790 Baht</h3>
+                    //         <button class="buy">Buy</button>
+                    //     </div>
+                    // </div>
                 }else if(Data===Collection){
                     Check=false;
                     console.log("Collection")
