@@ -1,74 +1,97 @@
-function fetchAdminData() {
-    displayAdmins(admins);
-}
+// /User
+document.addEventListener("DOMContentLoaded", function() {
+    const email = localStorage.getItem("User_id")
+    
+    console.log({ id: email})
+    
+    fetch('http://localhost:2021/admin', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: email})
+    })
+    .then(result => result.json())
+    .then(data => {
+        console.log(data); 
+        const infro = data.data;
 
-function displayAdmins(admins) {
-    const adminDetailsContainer = document.getElementById("adminDetails");
-    // Clear previous content
-    adminDetailsContainer.innerHTML = "";
-    // Loop through each admin and create admin details
-    admins.forEach(admin => {
-        const adminDetailDiv = document.createElement("div");
-        adminDetailDiv.classList.add("admin-detail");
-        // Loop through each property of the admin and create detail lines
-        for (let key in admin) {
-            const detailLineDiv = document.createElement("div");
-            detailLineDiv.classList.add("detail-line");
-            const detailLabelDiv = document.createElement("div");
-            detailLabelDiv.classList.add("detail-label");
-            detailLabelDiv.textContent = key;
-            const detailValueDiv = document.createElement("div");
-            detailValueDiv.classList.add("detail-value");
-            detailValueDiv.textContent = admin[key];
-            detailLineDiv.appendChild(detailLabelDiv);
-            detailLineDiv.appendChild(detailValueDiv);
-            adminDetailDiv.appendChild(detailLineDiv);
+        document.getElementById("fname").value=infro.FName
+        document.getElementById("lname").value=infro.LName
+        document.getElementById("bt").value=infro.UserEmail
+        document.getElementById("phone").value=infro.Age
+        document.getElementById("email").value=infro.Phone
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error); 
+    });
+});
+
+
+function updateuser() {
+    // Get user information from input fields
+    const email = localStorage.getItem("User_id")
+    const firstName = document.getElementById("newFirstName").value;
+    const lastName = document.getElementById("newLastName").value;
+   
+    const age = document.getElementById("age").value;
+    const phone = document.getElementById("PhoneNumber").value;
+ // const email = document.getElementById("newEmail").value;
+    const userData = {
+        "FName": firstName,
+        "FName": lastName,
+        "Age": age,
+        "Phone": phone
+    };
+
+    fetch("http://localhost:2021/updateUser", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email: email, // Pass user email for identification
+            userData: userData // Pass user data for update
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
         }
-        // Create update and delete buttons
-        const updateButton = document.createElement("button");
-        updateButton.textContent = "Update";
-        updateButton.classList.add("update-btn");
-        updateButton.addEventListener("click", () => updateAdmin(admin.id));
-
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.classList.add("delete-btn");
-        deleteButton.addEventListener("click", () => deleteAdmin(admin.id));
-
-        adminDetailDiv.appendChild(updateButton);
-        adminDetailDiv.appendChild(deleteButton);
-
-        // Append the admin detail to the container
-        adminDetailsContainer.appendChild(adminDetailDiv);
+        throw new Error("Failed to update user information");
+    })
+    .then(data => {
+        // Handle successful update (e.g., display success message)
+        // console.log("User information updated successfully:", data);
+        window.location.href='/List_User'; 
+    })
+    .catch(error => {
+        // Handle error (e.g., display error message)
+        console.error("Error updating user information:", error);
     });
 }
 
-// Function to update admin
 
-// function updateAdmin(adminId) {
-//     const adminIndex = admins.findIndex(admin => admin.id === adminId);
-//     const adminToUpdate = admins[adminIndex];
-//     const newFirstName = prompt("Enter new first name:", adminToUpdate.firstName);
-//     const newLastName = prompt("Enter new last name:", adminToUpdate.lastName);
-//     const newEmail = prompt("Enter new email:", adminToUpdate.email);
 
-//     if (newFirstName && newLastName && newEmail) {
-//         admins[adminIndex] = {
-//             adminToUpdate,
-//             firstName: newFirstName,
-//             lastName: newLastName,
-//             email: newEmail
-//         };
-//         displayAdmins(admins);
-//     }
-// }
+function deleteuser() {
+    // Get user information from input fields
+    const email = localStorage.getItem("User_id")
+    
+    console.log({ id: email})
 
-// Function to delete admin
-// function deleteAdmin(adminId) {
-//     const confirmDelete = confirm("Are you sure you want to delete this account?");
-//     if (confirmDelete) {
-//         admins = admins.filter(admin => admin.id !== adminId);
-//         displayAdmins(admins);
-//     }
-// }
-fetchAdminData();
+    fetch('http://localhost:2021/deleteUser', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: email})
+    })
+    .then(result => result.json())
+    .then(data => {
+        console.log(data)
+        window.location.href='/List_User'; 
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error); 
+    });
+}

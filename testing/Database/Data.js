@@ -211,8 +211,8 @@ router.post('/insertAdmin', (req, res) => {
 });
 
 // select admin
-router.get('/admin/:adminID', (req, res) => {
-    const adminId = req.params.adminID;
+router.get('/admin', (req, res) => {
+    const adminId = req.body.id;
 
     connection.query('SELECT * FROM Admins WHERE AdminID = ?', adminId, function (error, results) {
         if (error) {
