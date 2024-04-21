@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function updateUser() {
+function updateuser() {
     // Get user information from input fields
     const email = localStorage.getItem("User_id")
     const firstName = document.getElementById("newFirstName").value;
