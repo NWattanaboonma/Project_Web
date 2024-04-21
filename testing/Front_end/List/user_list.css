@@ -60,11 +60,11 @@ body {
 }
 
 button {
-        background-color: #c8aa89;
+        background-color: #c2bebc;
         border: 2px solid #14120e;
         border-radius: 20px; 
         box-shadow: #422800 2px 2px 0 0; 
-        color: #422800;
+        color: black;
         cursor: pointer;
         display: inline-block;
         font-weight: 600;
@@ -86,7 +86,7 @@ button {
 }
 
 .button{
-  box-shadow: #422800 2px 2px 0 0;
+  box-shadow: #ffffff 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
