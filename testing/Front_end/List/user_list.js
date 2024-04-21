@@ -20,41 +20,39 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("newFirstName").value=infro.FName
         document.getElementById("newLastName").value=infro.LName
         document.getElementById("newEmail").value=infro.UserEmail
-        document.getElementById("newAge").value=infro.Age
-        document.getElementById("newPhoneNumber").value=infro.Phone
+        document.getElementById("age").value=infro.Age
+        document.getElementById("PhoneNumber").value=infro.Phone
     })
     .catch(error => {
         console.error('Error fetching data:', error); 
     });
 
+    
+    
 });
 
 
-function updateUser() {
+function updateuser() {
     // Get user information from input fields
     const email = localStorage.getItem("User_id")
     const firstName = document.getElementById("newFirstName").value;
     const lastName = document.getElementById("newLastName").value;
-   
-    const age = document.getElementById("newAge").value;
-    const phone = document.getElementById("newPhoneNumber").value;
- // const email = document.getElementById("newEmail").value;
-    const userData = {
-        "firstName": firstName,
-        "lastName": lastName,
-        "age": age,
-        "phoneNumber": phone
-    };
+    const age = document.getElementById("age").value;
+    const phone = document.getElementById("PhoneNumber").value;
 
-    fetch("/updateUser", {
-        method: "PUT",
+    const userData = {
+        "FName": firstName,
+        "LName": lastName,
+        "Age": age,
+        "Phone": phone
+    };
+    
+    fetch("http://localhost:2021/updateUser", {
+        method: 'PUT',
         headers: {
-            "Content-Type": "application/json"
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            email: email, // Pass user email for identification
-            userData: userData // Pass user data for update
-        })
+        body: JSON.stringify({ email: email,userData: userData})
     })
     .then(response => {
         if (response.ok) {
@@ -70,5 +68,6 @@ function updateUser() {
         // Handle error (e.g., display error message)
         console.error("Error updating user information:", error);
     });
+    
 }
 
