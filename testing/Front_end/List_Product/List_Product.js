@@ -13,13 +13,13 @@ function using(){
         for (var i=0; i<products.length; i++){
             const product = products[i];
             const picture = product.picture;
-            const name = product.name;
             const collection = product.collection;
+            const name = product.name;
             const color = product.color;
             const price = product.price;
 
-            document.getElementById("list").innerHTML += `
-                <div class='box'>
+            document.getElementById("list").innerHTML += 
+                `<div class='box'>
                     <div id="number">${i+1}</div>
                     <div class="product-info">
                         <img src="${picture}" alt="Product Image" class="product-image">
@@ -29,8 +29,7 @@ function using(){
                         </div>
                     </div>
                     <button class="edit-button">Edit</button>
-                </div>
-            `;
+                </div>`;
         }
     })
     .catch(error => {
