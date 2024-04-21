@@ -1,23 +1,33 @@
-const express = require("express");
-const app = express();
-const path = require('path');
-const mysql = require('mysql2');
-const dotenv = require("dotenv");
-const router = express.Router();
-
-app.use("/", router);
-
-dotenv.config();
-
-var connection = mysql.createConnection({
-    // host : process.env.host,
-    // user : process.env.DB_user,
-    // password : process.env.DB_pass,
-    // database : process.env.DB_name
+function loginForm() {
+    const username = document.getElementById("Name").value; 
+    const password = document.getElementById("PW").value; 
+   
+    
+    const userlogin_data = {
+      "userName": username,
+      "UserPassword": password,
+    };
+  
+    fetch('http://localhost:2021/login/:email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ userData: userlogin_data })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to register user. Status: ' + response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log("try")
+      console.log(data); 
+    })
+    .catch(error => {
+      console.error('Error registering user:', error); 
     });
-
-    connection.connect(function(err){
-    if(err) throw err;
-    console.log(`Connected DB: ${process.env.DB_name}`);
-    });
-
+    
+  }
+  

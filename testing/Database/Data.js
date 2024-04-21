@@ -28,7 +28,7 @@ connection.connect(function(err){
 });
 
 router.get('/List_Admin', (req, res) => {
-    const sql = ' select * from Admins;';
+    const sql = ' select * from Admins';
         connection.query( sql, function (error, results) {
         if (error) throw error;
             return res.send({ error: false, data: results});

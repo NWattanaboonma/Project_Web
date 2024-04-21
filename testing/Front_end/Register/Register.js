@@ -3,7 +3,7 @@
 //   document.getElementById("Sign_in").addEventListener("click", registerForm);
 // });
 
-function registerForm() {
+function logincheck() {
   const fname = document.getElementById("Fame").value; 
   const lname = document.getElementById("Lame").value; 
   const email = document.getElementById("email").value;
