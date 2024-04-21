@@ -3,47 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Details</title>
-    
-    <script src="/Nav/nav.js" defer></script>
-
-    <link rel="stylesheet" href="/admin_detail.css">
+    <title>Document</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/Admin_detail.css">
 </head>
 <body>
     <navbar-component></navbar-component>
     <nav class="bar"></nav>
-    
-    <from class="contain">
-        <div class="head_login"><b>Admin Details</b></div>
-        <!-- <div class="box_login"> -->
-            <div class="detail-line">
-                <div class="detail-label">First Name:</div>
-                <input class="detail-value" id="firstName">
-            </div>
-            <div class="detail-line">
-                <div class="detail-label">Last Name:</div>
-                <input class="detail-value" id="lastName"></div>
-            </div>    
-            <div class="detail-line">
-                <div class="detail-label">Date of Birth:</div>
-                <input class="detail-value" id="Date of Birth"></div>
-            </div>    
-            <div class="detail-line">
-                <div class="detail-label">Phone number:</div>
-                <input class="detail-value" id="Phone number"></div>
-            </div>  
-            <div class="detail-line">
-                <div class="detail-label">Email:</div>
-                <input class="detail-value" id="Email"></div>
-            </div>   
-        <!-- </div>    -->
-        <button id="updateBtn" class="update-btn" onclick="updateAdmin()">Update</button>
-        <button id="deleteBtn" class="delete-btn">Delete</button>
-        </from>
-        
-
+    <div class="box">
+        <div class="Head"><b>Admin Details</b></div>
+        <form class="center">
+            <label for="fname">FirstName: <input type="text" id="fname"></label>
+            <label for="lname">LastName: <input type="text" id="lname"></label>
+            <label for="bt">Date of Birth: <input type="date" id="bt"></label>
+            <label for="phone">Phone number: <input type="number" id="phone"></label>
+            <label for="email">Email: <input type="email" id="email"></label>
+        </form>
+    </div>
     <footer-component></footer-component>
 
-    <script src="admin_detail.js"></script>
+    
 </body>
 </html>
