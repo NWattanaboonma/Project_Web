@@ -16,7 +16,7 @@
 
 .Product{
     margin-top: 3rem;
-    background-color: yellowgreen;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -38,12 +38,12 @@
     height: 40px;
     font-size: 16px;
     padding: 7px;
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     border-radius: 5px;
 }
 
 .AdvanceSearch button {
-    padding: 14px;
+    padding: 13px;
     background-color: #454444;
     color: white;
     font-size: 16px;
@@ -51,26 +51,28 @@
     border-radius: 50px;
     cursor: pointer;
     float: right;
-    margin-top: 3rem;
+    margin-top: 10px;
 }
-.infor{
+.info{
     height: 156px;
     width: 40%;
     display: flex;
-    /* center the button */
     justify-content: center;
     flex-wrap: wrap;
 }
-.infor div{
+.info div{
     width: 100%;
     display: flex;
     justify-content: center;
     
-}
-.infor button{
+}   
+.info button{
     margin: 0;
+    padding: 10px 20px;
 }
 .imgproducts{
     width: 100%;
     height: 70%;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
 }
