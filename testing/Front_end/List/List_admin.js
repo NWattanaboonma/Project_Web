@@ -12,7 +12,7 @@ function using(){
       console.log(infro);
       for (var i=0;i<infro.length;i++){
         const List=infro[i]
-        const firstname=List.FName
+        const adminID=List.adminID
         const lastname=List.LName
         const email=List.UserEmail
         const Call = List.Phone

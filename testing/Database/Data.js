@@ -319,8 +319,8 @@ router.put('/updateUser', (req,res) => {
  });
 
 // delete user
-router.delete('/deleteUser/:email', (req,res) =>{
-    const user_email = req.params.email;
+router.delete('/deleteUser', (req,res) =>{
+    const user_email = req.body.id;
   
     if (!user_email){
       return res.status(400).send({ error: true, message: 'Please provide user_email' });

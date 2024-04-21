@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     console.log({ id: email})
     
-
     fetch('http://localhost:2021/User', {
         method: 'POST',
         headers: {
@@ -26,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => {
         console.error('Error fetching data:', error); 
     });
-
-    
-    
 });
 
 
@@ -37,22 +33,26 @@ function updateuser() {
     const email = localStorage.getItem("User_id")
     const firstName = document.getElementById("newFirstName").value;
     const lastName = document.getElementById("newLastName").value;
+   
     const age = document.getElementById("age").value;
     const phone = document.getElementById("PhoneNumber").value;
-
+ // const email = document.getElementById("newEmail").value;
     const userData = {
         "FName": firstName,
-        "LName": lastName,
+        "FName": lastName,
         "Age": age,
         "Phone": phone
     };
-    
+
     fetch("http://localhost:2021/updateUser", {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email: email,userData: userData})
+        body: JSON.stringify({
+            email: email, // Pass user email for identification
+            userData: userData // Pass user data for update
+        })
     })
     .then(response => {
         if (response.ok) {
@@ -62,12 +62,36 @@ function updateuser() {
     })
     .then(data => {
         // Handle successful update (e.g., display success message)
-        console.log("User information updated successfully:", data);
+        // console.log("User information updated successfully:", data);
+        window.location.href='/List_User'; 
     })
     .catch(error => {
         // Handle error (e.g., display error message)
         console.error("Error updating user information:", error);
     });
-    
 }
 
+
+
+function deleteuser() {
+    // Get user information from input fields
+    const email = localStorage.getItem("User_id")
+    
+    console.log({ id: email})
+
+    fetch('http://localhost:2021/deleteUser', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: email})
+    })
+    .then(result => result.json())
+    .then(data => {
+        console.log(data)
+        window.location.href='/List_User'; 
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error); 
+    });
+}
