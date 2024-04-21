@@ -3,40 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Details</title>
-
-    <script src="/Nav/nav.js" defer></script>
-    
-    <link rel="stylesheet" href="user_list.css">
-    <script src="Update_Use.js"></script>
+    <title>User Account Management</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/user_list.css">
+    <script src="/user_list.js"></script>
 </head>
 <body>
+    <navbar-component></navbar-component>
     <nav class="bar"></nav>
+
     
     <div class="container">
         <div class="box_login">
-            <div class="head_login"><b>User Details</b></div>
+            <div class="head_login"><b>User Information</b></div>
+            <div>
+                <input type="text" placeholder="First Name" id="newFirstName">
+                <input type="text" placeholder="Last Name" id="newLastName">
+                <input type="email" placeholder="Email" id="newEmail">
+                <button onclick="addUser()">Add User</button>
+            </div>
 
-            <table id="userTable">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody id="userTableBody">
-                    <!-- User details will be displayed here -->
-                </tbody>
-            </table>
-
-            
-            
+            <div id="userDetails"></div>
         </div>
     </div>
 
     <footer-component></footer-component>
 
-
+    
 </body>
 </html>

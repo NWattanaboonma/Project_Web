@@ -1,32 +1,32 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #efe9e9;
+    background-color: #e6ddddf6;
 }
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
 }
 
 .bar {
-    background-color: #efe9e9;
+    background-color: #e6ddddf6;
     height: 50px;
 }
 
 .box_login {
     margin-top: 20px;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
 }
 
 .head_login {
     text-align: center;
     margin-bottom: 20px;
-    color: #363636;
+    color: #363636ec;
     font-size: 24px;
 }
 
@@ -34,7 +34,6 @@ body {
     margin-bottom: 30px; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
 }
 
 .detail-line {
@@ -54,23 +53,53 @@ body {
     flex: 1;
     padding: 10px;
     border-radius: 8px;
-    background-color: #f3ecec;
+    background-color: lightgrey;
     font-size: 16px;
     color: black;
     margin-left: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-left: 10px;
+        background-color: #c2bebc;
+        border: 2px solid #14120e;
+        border-radius: 20px; 
+        box-shadow: #422800 2px 2px 0 0; 
+        color: black;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px; 
+        padding: 10px 16px;
+        line-height: 1; 
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-left: 10px;
+        margin-top: 10px; 
+        margin-bottom: 20px;
+    }
+    
+.button {
+  background-color: #fff;
 }
 
-button:hover {
-    background-color: grey;
+.button{
+  box-shadow: #ffffff 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
+
+@media (min-width: 768px) {
+  .button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+button:hover {
+    background-color: white;
+}
+
+

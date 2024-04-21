@@ -1,26 +1,15 @@
-// Function to fetch admin data from the backend (mocked for demonstration)
 function fetchAdminData() {
-    // Mocked admin data from the backend
-    const admins = [
-        { Id: 1, FirstName: "John", LastName: "Doe", Email: "john@example.com" },
-        { id: 2, firstName: "Jane", lastName: "Smith", email: "jane@example.com" },
-        { id: 3, firstName: "Alice", lastName: "Johnson", email: "alice@example.com" }
-    ];   // delete later
     displayAdmins(admins);
 }
 
-// Function to display admin details in the frontend
 function displayAdmins(admins) {
     const adminDetailsContainer = document.getElementById("adminDetails");
-
     // Clear previous content
     adminDetailsContainer.innerHTML = "";
-
     // Loop through each admin and create admin details
     admins.forEach(admin => {
         const adminDetailDiv = document.createElement("div");
         adminDetailDiv.classList.add("admin-detail");
-
         // Loop through each property of the admin and create detail lines
         for (let key in admin) {
             const detailLineDiv = document.createElement("div");
@@ -35,7 +24,6 @@ function displayAdmins(admins) {
             detailLineDiv.appendChild(detailValueDiv);
             adminDetailDiv.appendChild(detailLineDiv);
         }
-
         // Create update and delete buttons
         const updateButton = document.createElement("button");
         updateButton.textContent = "Update";
@@ -82,6 +70,4 @@ function deleteAdmin(adminId) {
         displayAdmins(admins);
     }
 }
-
-// Call the function to fetch admin data from the backend
 fetchAdminData();

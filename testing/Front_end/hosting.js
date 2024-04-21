@@ -68,7 +68,9 @@ call('Edit','Edit.html','/Edit');
 call('List','list_user.html','/List_User')
 call('List','List_admin.html','/List_Admin')
 call('List','Admin_detail.html','/Admin_detail')
-call('List','User_list.html','/user_list')
+call('List','user_list.html','/user_list')
+call("List_Product",'List_product.html','/List_product')
+// call('List','user_list','/user_list')
 // Project_web.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});
 
