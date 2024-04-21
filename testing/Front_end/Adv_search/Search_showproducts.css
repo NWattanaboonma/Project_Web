@@ -13,20 +13,94 @@ body {
 
 .text {  
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: baseline;
     margin-top: 20px;
-    width: 1400px;
+    /* width: 1400px; */
+    /* max-width: 100%; */
     background-color: aqua;
 }
-.textbox{
-    width: 350px;
+.textbox1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
     background-color: gray;
-    height: 500px;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+    flex-grow: 2;
 }
 
+.textbox2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+.textbox3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.textbox4{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+.textbox5{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+.textbox6{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+.textbox7{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
+.textbox8{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    background-color: gray;
+    height: 50%;
+    justify-content: center;
+    align-items: baseline;
+}
 .detail {
     text-align: center;
     background-color: antiquewhite;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
