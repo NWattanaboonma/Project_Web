@@ -79,7 +79,7 @@ router.post('/login', (req, res) => {
         return res.status(400).send({ error: true, message: 'Please provide email or the password' });
     }
     else if (!password) {
-        return res.status(400).send({ error: true, message: 'Please provide email or the password' });
+        return res.status(400).send({ error: true, message: 'Please provide the password' });
     }
 
     connection.query('SELECT * FROM users WHERE UserEmail = ? AND UserPassword = ?', [email, password], function (error, results) {
@@ -89,7 +89,7 @@ router.post('/login', (req, res) => {
         }
 
         if (results.length === 0) {
-            return res.status(404).json({ error: true, message: 'User not found' });
+            return res.status(201).json({ error: true, message: 'User not found' });
         }
 
         // Return the first result from the query
