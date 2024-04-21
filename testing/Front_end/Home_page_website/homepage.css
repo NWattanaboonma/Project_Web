@@ -71,6 +71,7 @@ body{
 .spare_picture{
     padding: 0%;
     width: 1400px;
+    /* width: 60%; */
     display: flex;
     justify-content: space-around;
 }

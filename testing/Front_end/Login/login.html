@@ -8,7 +8,7 @@
     <!-- <link  rel="stylesheet" href="homepage.css"> -->
     <link  rel="stylesheet" href="/login.css">
     <script src="/Nav/nav.js" defer></script>
-    <!-- <script src = "login.js"></script> -->
+    <script src = "/login.js"></script>
 
         
     <navbar-component></navbar-component>
@@ -30,7 +30,8 @@
                 <input type="email" placeholder="Email"  id="Name">
                 <input type="password" placeholder="Password" id="PW">
                 <div>
-                <button onclick="loginForm()">Login</button>
+                
+                <button type="submit" onclick="loginForm()" id="login">Login</button>
                 
                 <a href="/Register"><p ><u>Sign-up?</u></p></a>
                 </div>
@@ -40,7 +41,7 @@
             
         </div>
     </div>
-
+   
     <footer-component></footer-component>
     
 </body>
