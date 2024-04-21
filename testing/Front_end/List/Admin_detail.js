@@ -2,18 +2,14 @@ function fetchAdminData() {
     displayAdmins(admins);
 }
 
-// Function to display admin details in the frontend
 function displayAdmins(admins) {
     const adminDetailsContainer = document.getElementById("adminDetails");
-
     // Clear previous content
     adminDetailsContainer.innerHTML = "";
-
     // Loop through each admin and create admin details
     admins.forEach(admin => {
         const adminDetailDiv = document.createElement("div");
         adminDetailDiv.classList.add("admin-detail");
-
         // Loop through each property of the admin and create detail lines
         for (let key in admin) {
             const detailLineDiv = document.createElement("div");
@@ -28,7 +24,6 @@ function displayAdmins(admins) {
             detailLineDiv.appendChild(detailValueDiv);
             adminDetailDiv.appendChild(detailLineDiv);
         }
-
         // Create update and delete buttons
         const updateButton = document.createElement("button");
         updateButton.textContent = "Update";
@@ -75,6 +70,4 @@ function deleteAdmin(adminId) {
         displayAdmins(admins);
     }
 }
-
-// Call the function to fetch admin data from the backend
 fetchAdminData();
