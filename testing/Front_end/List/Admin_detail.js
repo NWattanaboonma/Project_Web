@@ -44,30 +44,31 @@ function displayAdmins(admins) {
 }
 
 // Function to update admin
-function updateAdmin(adminId) {
-    const adminIndex = admins.findIndex(admin => admin.id === adminId);
-    const adminToUpdate = admins[adminIndex];
-    const newFirstName = prompt("Enter new first name:", adminToUpdate.firstName);
-    const newLastName = prompt("Enter new last name:", adminToUpdate.lastName);
-    const newEmail = prompt("Enter new email:", adminToUpdate.email);
 
-    if (newFirstName && newLastName && newEmail) {
-        admins[adminIndex] = {
-            adminToUpdate,
-            irstName: newFirstName,
-            lastName: newLastName,
-            email: newEmail
-        };
-        displayAdmins(admins);
-    }
-}
+// function updateAdmin(adminId) {
+//     const adminIndex = admins.findIndex(admin => admin.id === adminId);
+//     const adminToUpdate = admins[adminIndex];
+//     const newFirstName = prompt("Enter new first name:", adminToUpdate.firstName);
+//     const newLastName = prompt("Enter new last name:", adminToUpdate.lastName);
+//     const newEmail = prompt("Enter new email:", adminToUpdate.email);
+
+//     if (newFirstName && newLastName && newEmail) {
+//         admins[adminIndex] = {
+//             adminToUpdate,
+//             firstName: newFirstName,
+//             lastName: newLastName,
+//             email: newEmail
+//         };
+//         displayAdmins(admins);
+//     }
+// }
 
 // Function to delete admin
-function deleteAdmin(adminId) {
-    const confirmDelete = confirm("Are you sure you want to delete this account?");
-    if (confirmDelete) {
-        admins = admins.filter(admin => admin.id !== adminId);
-        displayAdmins(admins);
-    }
-}
+// function deleteAdmin(adminId) {
+//     const confirmDelete = confirm("Are you sure you want to delete this account?");
+//     if (confirmDelete) {
+//         admins = admins.filter(admin => admin.id !== adminId);
+//         displayAdmins(admins);
+//     }
+// }
 fetchAdminData();
