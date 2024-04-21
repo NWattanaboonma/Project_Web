@@ -20,7 +20,7 @@ function using(){
       <div class='box'>
       <div id="number">${i+1}</div>
       <div id="Admin_data">
-        <p>${userName}(${ID}) Role:${roles} email: ${email}</p>
+        <p>${userName}(${ID}) Role:${roles} email: <a href = "mailto: ${email}" >${email}</a></p>
       </div>
       <button id="Detail" onclick="updateadd()">Detail</button>
       </div>

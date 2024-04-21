@@ -27,6 +27,7 @@ connection.connect(function(err){
     console.log(`Connected DB: ${process.env.MYSQL_DATABASE}`);
 });
 
+// get List_Admins
 router.get('/List_Admin', (req, res) => {
     const sql = ' select * from Admins';
         connection.query( sql, function (error, results) {
@@ -34,6 +35,15 @@ router.get('/List_Admin', (req, res) => {
             return res.send({ error: false, data: results});
         });
 });
+// get List_User
+router.get('/List_User', (req, res) => {
+    const sql = 'select * from Users;';
+        connection.query( sql, function (error, results) {
+        if (error) throw error;
+            return res.send({ error: false, data: results});
+        });
+});
+
 
 //register (passsss)
 router.post('/register', (req, res) => {
