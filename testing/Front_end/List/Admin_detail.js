@@ -1,3 +1,7 @@
+function fetchAdminData() {
+    displayAdmins(admins);
+}
+
 // Function to display admin details in the frontend
 function displayAdmins(admins) {
     const adminDetailsContainer = document.getElementById("adminDetails");
