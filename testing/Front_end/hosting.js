@@ -26,6 +26,7 @@ router.use(express.urlencoded({ extended: true }));
 //     next();
 // });
 router.use("/Nav",express.static(path.join(__dirname, 'Nav')));
+router.use("/product",express.static(path.join(__dirname, 'porduct')));
 function call(Name,file,url){
     router.use(express.static(path.join(__dirname, Name)));
     
