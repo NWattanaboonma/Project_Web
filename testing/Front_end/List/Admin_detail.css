@@ -1,15 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
     background-color: #efe9e9;
 }
 
-.container {
+.contain {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+    height: 1000px;
+    /* background-color: white;
+    border-radius: 10px; */
 }
 
 .bar {
@@ -18,9 +15,9 @@ body {
 }
 
 .box_login {
-    margin-top: 20px;
+    /* margin-top: 20px;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 
 .head_login {
@@ -35,6 +32,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+    margin-bottom: 2rem;
 }
 
 .detail-line {
@@ -51,12 +49,11 @@ body {
 }
 
 .detail-value {
-    flex: 1;
-    padding: 10px;
-    border-radius: 8px;
+    width: max-content;
+    padding: 1px;
+    border-radius: 5px;
     background-color: #f3ecec;
-    font-size: 16px;
-    color: black;
+    /* color: black; */
     margin-left: 10px;
 }
 
