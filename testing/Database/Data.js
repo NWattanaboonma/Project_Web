@@ -72,14 +72,17 @@ router.post('/register', (req, res) => {
 
 
 // login (passsss)
-router.post('/login/:email', (req, res) => {
-    const email = req.params.email;
-
+router.post('/login', (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
     if (!email) {
-        return res.status(400).send({ error: true, message: 'Please provide email' });
+        return res.status(400).send({ error: true, message: 'Please provide email or the password' });
+    }
+    else if (!password) {
+        return res.status(400).send({ error: true, message: 'Please provide email or the password' });
     }
 
-    connection.query('SELECT UserEmail FROM Users WHERE UserEmail = ? UNION SELECT Username FROM Admins WHERE AdEmail = ?', [email, email], function (error, results) {
+    connection.query('SELECT * FROM users WHERE UserEmail = ? AND UserPassword = ?', [email, password], function (error, results) {
         if (error) {
             console.error('Error fetching user information:', error);
             return res.status(500).json({ error: true, message: 'Internal server error', details: error.message });
