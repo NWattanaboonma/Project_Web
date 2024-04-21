@@ -17,44 +17,28 @@
         <div class="slide">
             <div class="picture">
                 <img id="pic1" src="Angel.png">
-                <img id="pic2" src="Bloom_b.png">
-                <img id="pic3" src="Bloom_w.png">
             </div>
             <br>
-            <div class="click">
-                    <a href="#pic1" class="box_product">1</a>
-                    <a href="#pic2" class="box_product">2</a>
-                    <a href="#pic3" class="box_product">3</a>
-            </div>
         </div>
     
     </div>
     <div style="padding-left: 25%; max-width: 30rem; ">
-        <br>
         <div style="display: flex; align-items: flex-end;"><h1>RICH AS HELL <sub><small>ID:@56453</small></sub></h1></div>
-        <br>
         <div><h2>790 THB</h2></div>
-        <br>
-        <h2>Collection</h2>
-        <br>
-        <h2>SIZE</h2>
-        <form action="" >
-            <br>
-            <div class="size">
-                <button class="box_product" onclick="size_box()">S</button>
-                <button class="box_product" name="size_btn">M</button>
-                <button class="box_product" name="size_btn">L</button>
-                <button class="box_product" name="size_btn">XL</button>
-                <button class="box_product" name="size_btn">XXL</button>
-                <button class="box_product" name="size_btn">Super_XL</button>
-            </div>
-        <br>
-        <h2><label>Quantity:</label><input type="number"></h2>
-        <br>
-        <!-- <div class="left:50 rem"> -->
-            <button class = "box_product_2" type="submit">Buy</button>
-        <!-- </div> -->
-        </form>
+        <h2 id="event">Collection:</h2>
+        <div class="same_line">
+            <h2>SIZE:</h2>
+                <select id="option">
+                    <option id="S">S</option>
+                    <option id="M">M</option>
+                    <option id="L">L</option>
+                    <option id="XL">XL</option>
+                    <option id="XXL">XXL</option>
+                    <option id="superXL">superXL</option>
+                </select>
+                <h2><label>Quantity:</label><input type="number"></h2>
+    </div>
+            <button class = "box_product_2" type="button">Buy</button>
 
     </div>
 

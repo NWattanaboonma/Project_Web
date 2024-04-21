@@ -13,20 +13,13 @@ body{
 }
 .picture{
     display: flex;
-    overflow: auto;
-    scroll-behavior: smooth;
 }
 .picture img{
     width: 320px;
     height: 420px;
     flex: 1 0 100%;
+}
 
-}
-.click {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 30rem;
-}
 .box_product{
     padding: 8px 12px;
     background-color: black;
@@ -54,5 +47,16 @@ div .box_product_2{
 }
 .size:active{
     border-color: red;
+}
+
+.same_line{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+select{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    height: fit-content;
 }
 
