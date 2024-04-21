@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.product-image-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#productImage {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: lightgrey;
+}
+
+button[type="submit"] {
+    margin-right: 1rem;
+}
+
+button[type="button"] {
+    background-color: black;
+}
+
+button[type="button"]:hover {
+    background-color: lightgrey;
+}
