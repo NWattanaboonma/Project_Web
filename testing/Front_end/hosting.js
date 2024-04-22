@@ -76,8 +76,7 @@ call('List','Admin_detail_add.html','/Admin_detail_add')
 // Product
 call('product','product.html','/Detail')
 // Guess it
-call('Guess','Guess.html','/you_been_Troll')
-
+call('Guess','Guess.html','/Guess')
 
 // Add admin
 
