@@ -16,13 +16,14 @@ function using(){
       const ID = List.AdminID
       const roles= List.Roles
       const userName= List.UserName
+      const data = String("'"+ID+"'");
       document.getElementById("list").innerHTML+=`
       <div class='box'>
       <div id="number">${i+1}</div>
       <div id="Admin_data">
         <p>${userName}(${ID}) Role:${roles} email: <a href = "mailto: ${email}" >${email}</a></p>
       </div>
-      <button id="Detail" onclick="updateadd()">Detail</button>
+      <button id="Detail" onclick="updateadd(${data})">Detail</button>
       </div>
     `;
     }
@@ -32,4 +33,7 @@ function using(){
 });
 
 }
-
+function updateadd(data){
+  console.log(data)
+  window.location.href="/Admin_detail";
+}

@@ -1,3 +1,3 @@
-function updateadd(){
-    window.location.href="/Admin_detail";
-}
+// function updateadd(){
+//     window.location.href="/Admin_detail";
+// }
