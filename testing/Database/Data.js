@@ -220,7 +220,7 @@ router.post('/insertAdmin', (req, res) => {
 });
 
 // select admin
-router.get('/admin', (req, res) => {
+router.post('/admin', (req, res) => {
     const adminId = req.body.id;
 
     connection.query('SELECT * FROM Admins WHERE AdminID = ?', adminId, function (error, results) {
