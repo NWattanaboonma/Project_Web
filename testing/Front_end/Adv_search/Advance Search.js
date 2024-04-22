@@ -12,7 +12,7 @@ function Find(){
     const collection = document.getElementById('collection').value;
     
     const url = 'http://localhost:2021/adsearch';
-
+    
 
     // Make a POST request to the server
     fetch(url, {
