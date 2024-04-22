@@ -17,8 +17,8 @@ function using(){
             const name = product.ProductName;
             const collection = product.Collection;
             const material = product.Meterial;
-            const picture = product.Image;
-            const price = product.price;
+            const image = product.Image;
+            const price = product.Price;
             const color = product.Color;
             const description=product.ProductDescription;
             const sizeS = product.size_S;
@@ -32,13 +32,13 @@ function using(){
 
             document.getElementById("list").innerHTML += 
                 `<div class='box'>
-                    <div id="number"><img src="${picture}" alt="Product Image" class="product-image"></div>
+                    <div id="number"><img src="${image}" alt="Product Image" class="product-image"></div>
                     <div class="product-info">
                         
                         <div class="product-details">
-                            <p><span class="name">${name}</span>,<span class="collection"> ${collection}</span></p>
+                            <p><span class="name">${name}</span><span class="collection"> ${collection}</span></p>
                             <p><span class="color">Color: ${color}</span>, Material: ${material}</p>
-                            <p class="price">Price: $${price}</p><p class="Des">Description: ${description}</p>
+                            <p class="price">Price: ${price}฿</p><p class="Des">Description: ${description}</p>
                             <p class="sizes">SizeS:${sizeS},SizeM:${sizeM},SizeL:${sizeL},SizeXL:${sizeXL}</p>
                             <p class="bsize">SizeXXL:${sizeXXL},SizeSuperXL:${sizeSuperXL},Quantity: ${quantity}</p>
                         </div>

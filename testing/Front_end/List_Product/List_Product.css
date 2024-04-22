@@ -78,3 +78,7 @@ h1{
 .color_it{
     color: rgb(63, 61, 61);
 }
+.product-info{
+    display: flex;
+}
+
