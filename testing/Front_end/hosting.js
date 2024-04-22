@@ -78,7 +78,7 @@ call('product','product.html','/Detail')
 // call('List','user_list','/user_list')
 // Project_web.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});
-
+call('Manow','manow.html','/testing')
 // w
 // can't forget the listen function it will not work
 // Project_web.listen(process.env.PORT, function() {

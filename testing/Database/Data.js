@@ -107,7 +107,7 @@ router.post('/login', (req, res) => {
 
 
 // select :detail product click image then pull information to front end (passsss)
-router.get('/product', (req, res) => { 
+router.post('/product', (req, res) => { 
     const productId = req.body.product_id;
 
     connection.query('SELECT * FROM Product WHERE ProductID = ?', productId, function (error, results) {
