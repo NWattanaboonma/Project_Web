@@ -59,9 +59,7 @@ fetch("http://localhost:2021/insertAdmin", {
 })
 .then(data => {
     console.log(data)
-    // Handle successful update (e.g., display success message)
-    // console.log("User information updated successfully:", data);
-    // window.location.href='/List_admins'; 
+    window.location.href='/List_Admin'; 
 })
 .catch(error => {
     // Handle error (e.g., display error message)
