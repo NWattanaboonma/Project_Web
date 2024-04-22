@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function gotodetail(){
-    window.location.href="/"
+function gotodetail(id) {
+    localStorage.setItem("productID", id);
+    window.location.href = "/product.html";
 }
 
