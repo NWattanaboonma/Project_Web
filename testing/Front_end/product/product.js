@@ -1,16 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const buyBtn = document.querySelector('.box_product_2');
-    const size = document.getElementById('option');
-    const quantityInput = document.querySelector('input[type="number"]');
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('ID');
+    console.log(id);
     
-    buyBtn.addEventListener('click', function() {
-        const selectedSize = size.options[size.selectedIndex].text;
-        const quantity = parseInt(quantityInput.value);
-        
-        if (quantity <= 0) {
-            alert('Please enter a positive quantity.');
-        } else {
-            alert('You are buying ' + quantity + ' of size ' + selectedSize);
-        }
-    });
+    fetch('http://localhost:2021/product', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ product_id: id })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 });
