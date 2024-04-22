@@ -107,7 +107,7 @@ router.post('/login', (req, res) => {
 
 
 // select :detail product click image then pull information to front end (passsss)
-router.get('/product', (req, res) => { 
+router.post('/product', (req, res) => { 
     const productId = req.body.product_id;
 
     connection.query('SELECT * FROM Product WHERE ProductID = ?', productId, function (error, results) {
@@ -141,18 +141,19 @@ router.put('/updateProduct', (req,res) => {
     });
 });
 
-// update product in stock can update follow by stockID 
+// update product 
 router.put('/updateProduct', (req,res) => {
-    const stock_id = req.body.id;
-    const stock = req.body.userData;
+    const product_id = req.body.id;
+    const product = req.body.productData;
  
-    if (!stock_id || !stock) {
-         return res.status(400).send({ error: stock, message: 'Please provide Product information' }); }
-     connection.query("UPDATE Stock set ? WHERE StockID = ?",[stock,stock_id], function (error, results) {
+    if (!product_id || !product) {
+         return res.status(400).send({ error: admin, message: 'Please provide Product information' }); }
+     connection.query("UPDATE Product set ? WHERE ProductID = ?",[product,product_id], function (error, results) {
          if (error) throw error;
          return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
      });
  });
+
 
 // delete product (from stock and product table)
 router.delete('/deleteProduct', (req,res) =>{
@@ -161,14 +162,11 @@ router.delete('/deleteProduct', (req,res) =>{
   if (!product_id){
     return res.status(400).send({ error: true, message: 'Please provide product_id' });
   }
-  connection.query('DELETE FROM Stock WHERE ProductID = ?', [product_id], function (error, results) {
-    if (error) throw error;
-    return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted from "Stock" successfully.' });
-  });
-  connection.query('DELETE FROM Product WHERE ProductID = ?',[product_id],function (error, results) {
+  connection.query('DELETE FROM Product WHERE ProductID = ?', [product_id], function (error, results) {
     if (error) throw error;
     return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted successfully.' });
   });
+
 });
 
 // advance search (passs)
