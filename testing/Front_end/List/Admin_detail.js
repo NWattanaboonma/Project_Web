@@ -1,4 +1,3 @@
-// /User
 document.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("User_id")
     
