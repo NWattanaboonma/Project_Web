@@ -184,7 +184,6 @@ router.post('/adsearch', (req, res) => {
       WHERE ProductName LIKE ? AND Color LIKE ? AND Collection LIKE ?
     `;
 
-    // const params = [`%${name}%`, `%${color}%`, `%${collection}%`];
 
     connection.query(sql, [name,color,collection], (error, results) => {
         if (error) {
@@ -193,10 +192,10 @@ router.post('/adsearch', (req, res) => {
         }
         
         if (results.length === 0) {
-            return res.status(404).json({ error: true, message: 'No products found' });
+            return res.status(201).json({ error: true, message: 'No products found' });
         }
-
-        res.json({ error: false, data: results, message: 'Products search successful' });
+        const product = results[0]; 
+        return res.send({ error: false, data: product, message: 'Products search successful' });
     });
 });
 
