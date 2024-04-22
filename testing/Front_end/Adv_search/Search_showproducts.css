@@ -14,43 +14,47 @@ body {
 .text {  
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content:space-evenly;
     align-content: baseline;
     margin-top: 20px;
+    flex-direction: row;
     /* width: 1400px; */
     /* max-width: 100%; */
-    background-color: aqua;
+    background-color: #D0C09E ;
 }
 .textbox1{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
+    background-color: #E6E5E0;
     height: 50%;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 
 .textbox2{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
+    background-color: #E6E5E0;
     height: 50%;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .textbox3{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
+    background-color: #E6E5E0;
     height: 50%;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 
 .textbox4{
@@ -105,7 +109,7 @@ body {
 }
 .detail {
     text-align: center;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     padding-left: 10%;
     padding-right: 10%;
 }
