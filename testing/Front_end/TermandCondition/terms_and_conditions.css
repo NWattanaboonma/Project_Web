@@ -28,9 +28,13 @@ div {
 }
 .back_g img{
     width: 1400px;
-    height: 790px;
+    height: 100%;
+    
     filter: brightness(2000%);
     filter: contrast(35%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .information .bolder {
