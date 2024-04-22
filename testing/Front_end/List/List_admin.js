@@ -23,7 +23,7 @@ function using(){
       <div id="Admin_data">
         <p>${userName}(${ID}) Role:${roles} email: <a href = "mailto: ${email}" >${email}</a></p>
       </div>
-      <button id="Detail" onclick="updateadd(${data})">Detail</button>
+      <button id="Detail" onclick="updateadmin(${data})">Detail</button>
       </div>
     `;
     }
@@ -33,7 +33,8 @@ function using(){
 });
 
 }
-function updateadd(data){
+function updateadmin(data){
   console.log(data)
+  localStorage.setItem("admin_id",data);
   window.location.href="/Admin_detail";
 }
