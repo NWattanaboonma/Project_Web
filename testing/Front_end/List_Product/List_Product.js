@@ -12,31 +12,35 @@ function using(){
         console.log(products);
         for (var i=0; i<products.length; i++){
             const product = products[i];
-            console.log(product[i]);
-            const name = product.name;
-            const collection = product.collection;
-            const material = product.material;
-            const picture = product.picture;
+            // const product = products;
+            // console.log(product[i]);
+            const name = product.ProductName;
+            const collection = product.Collection;
+            const material = product.Meterial;
+            const picture = product.Image;
             const price = product.price;
-            const color = product.color;
-            const description=product.description;
+            const color = product.Color;
+            const description=product.ProductDescription;
             const sizeS = product.size_S;
             const sizeM = product.size_M;
             const sizeL = product.size_L;
             const sizeXL = product.size_XL;
             const sizeXXL = product.size_XXL;
             const sizeSuperXL = product.size_superXL;
-            const quantity = product.quantity;
+            const quantity = product.Quantity;
         
 
             document.getElementById("list").innerHTML += 
                 `<div class='box'>
-                    <div id="number">${i+1}</div>
+                    <div id="number"><img src="${picture}" alt="Product Image" class="product-image"></div>
                     <div class="product-info">
-                        <img src="${picture}" alt="Product Image" class="product-image">
+                        
                         <div class="product-details">
-                            <p><span class="collection">${collection}</span>, <span class="name">${name}</span> (<span class="color">${color}</span>)</p>
-                            <p class="price">Price: $${price}</p>
+                            <p><span class="name">${name}</span>,<span class="collection"> ${collection}</span></p>
+                            <p><span class="color">Color: ${color}</span>, Material: ${material}</p>
+                            <p class="price">Price: $${price}</p><p class="Des">Description: ${description}</p>
+                            <p class="sizes">SizeS:${sizeS},SizeM:${sizeM},SizeL:${sizeL},SizeXL:${sizeXL}</p>
+                            <p class="bsize">SizeXXL:${sizeXXL},SizeSuperXL:${sizeSuperXL},Quantity: ${quantity}</p>
                         </div>
                     </div>
                     <button class="edit-button">Edit</button>
