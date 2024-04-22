@@ -11,8 +11,8 @@ class NavBar extends HTMLElement {
         </div>
         <div class="Hypefunction">
         <a href="/" class="line space_between white"> Home</a>
-        <a href="/" class="line space_between white"> Collection </a>
-        <a href="Sale_Product.html" class="line space_between white"> Sale </a>
+        <a href="/you_be_Troll" class="line space_between white"> Guess the new Collection </a>
+        <a  href="/" class="line space_between white"> Sale </a>
         <a href="/Support" class="line space_between white"> Support </a>
         </div>
         <div class="searchbox">
