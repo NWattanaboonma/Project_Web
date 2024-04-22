@@ -80,7 +80,7 @@ router.post('/login', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     if (!email) {
-        return res.status(400).send({ error: true, message: 'Please provide email or the password' });
+        return res.status(400).send({ error: true, message: 'Please provide email' });
     }
     else if (!password) {
         return res.status(400).send({ error: true, message: 'Please provide the password' });
