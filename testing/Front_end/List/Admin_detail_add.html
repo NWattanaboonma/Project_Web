@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="/Nav/nav.js"></script>
     <link rel="stylesheet" href="/Admin_detail.css">
+    <script src="/Admin_detail_add.js"></script>
 </head>
 <body>
     <navbar-component></navbar-component>
@@ -13,14 +14,23 @@
     <div class="box">
         <div class="Head"><b>Admin Details</b></div>
         <form class="center">
-            <label for="adID">AdminID: <input type="text" id="adID"></label>
-            <label for="username">Username: <input type="text" id="username"></label>
-            <label for="roles">Roles: <input type="text" id="roles"></label>
-            <label for="phone">AdEmail: <input type="text" id="phone"></label>
-            <label for="password">AdminPassword: <input type="text" id="password"></label>
+            <label for="adID">AdminID: <input type="text" id="adID" required></label>
+            <label for="username">Username: <input type="text" id="username" required>></label>
+            <label for="roles">Roles: <input type="text" id="roles" required>></label>
+            <label for="email">AdEmail: <input type="text" id="email" required>></label>
+            <label for="password">AdminPassword: <input type="text" id="password" required>></label>
+            <button type="submit" onclick="insertadmin()" id="add">Add</button>
         </form>
     </div>
     <footer-component></footer-component>
+    <script>
+         document.getElementById("add").addEventListener("click", function() {
+            // Perform update operation
+
+            // Redirect to the list page after successful update
+            window.location.href = "/List_Admin.html";
+        });
+    </script>
 
     
 </body>

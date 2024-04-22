@@ -15,13 +15,13 @@
     <div class="box">
         <div class="Head"><b>Admin Details</b></div>
         <form class="center">
-            <label for="adID">AdminID: <input type="text" id="adID"></label>
+            <label for="adID">AdminID: <input type="text" id="adID" disabled></label>
             <label for="username">Username: <input type="text" id="username"></label>
             <label for="roles">Roles: <input type="text" id="roles"></label>
             <label for="email">AdEmail: <input type="text" id="email"></label>
             <label for="password">AdminPassword: <input type="text" id="password"></label>
-            <button type="submit" onclick="">Update</button>
-            <button type="submit" onclick="">Delete</button>
+            <button type="submit" onclick="updateadmin()">Update</button>
+            <button type="submit" onclick="deleteadmin()">Delete</button>
         </form>
     </div>
     <footer-component></footer-component>

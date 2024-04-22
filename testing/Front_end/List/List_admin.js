@@ -38,3 +38,9 @@ function updateadmin(data){
   localStorage.setItem("admin_id",data);
   window.location.href="/Admin_detail";
 }
+function insertadmin(data){
+  console.log(data)
+  localStorage.setItem("admin_id",data);
+  window.location.href="/Admin_detail_add";
+}
+
