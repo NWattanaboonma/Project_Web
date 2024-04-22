@@ -61,28 +61,10 @@
             
         </div>
         <br>
-        <div class="box">
-            <a href="/Detail"><button id='PID019'class="btn_seemore black" onclick="gotodetail(id)">Buy</button> </a>
-            <a href="/Detail"><button id="001"class="btn_seemore black" onclick="gotodetail(id)">Buy</button> </a>
-            <a href="/Detail"><button id="011"class="btn_seemore black" onclick="gotodetail(id)">Buy</button> </a>
-            <a href="/Detail"><button id="006"class="btn_seemore black" onclick="gotodetail(id)">Buy</button> </a>
-        </div>
         
     </div>
 
     <br>
     <footer-component></footer-component> 
-    <script>
-        function gotodetail(d) {
-            // const B = String("PID"+d)
-            // console.log(B)
-            const data = {
-                "ID": d
-            }
-            const queryString = new URLSearchParams(data).toString();
-            const url = "/product.html?"+ queryString;;
-            window.location.href = url
-        }
-    </script>
 </body>
 </html>

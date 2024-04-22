@@ -75,16 +75,9 @@ call('List','Admin_detail_add.html','/Admin_detail_add')
 
 // Product
 call('product','product.html','/Detail')
-// call('List','user_list','/user_list')
-// Project_web.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'Home_Page_Website', 'Home_page.html'));});
-call('Manow','manow.html','/testing')
-// w
-// can't forget the listen function it will not work
-// Project_web.listen(process.env.PORT, function() {
-//     console.log("Server listening at Port " 
-// + process.env.PORT);
-// });
+// Guess it
+call('Guess','Guess.html','/you_been_Troll')
+
 
 // Add admin
 
