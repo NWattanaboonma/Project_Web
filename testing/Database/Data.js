@@ -75,15 +75,12 @@ router.post('/register', (req, res) => {
 });
 
 
-
-
-
 // login (passsss)
 router.post('/login', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     if (!email) {
-        return res.status(400).send({ error: true, message: 'Please provide email or the password' });
+        return res.status(400).send({ error: true, message: 'Please provide email' });
     }
     else if (!password) {
         return res.status(400).send({ error: true, message: 'Please provide the password' });
@@ -126,33 +123,19 @@ router.post('/product', (req, res) => {
 });
 
 
-
-  
-// update product (from table product) (can not use)
+// update product 
 router.put('/updateProduct', (req,res) => {
-   const product_id = req.body.id;
-   const product = req.body.userData;
-
-   if (!product_id || !product) {
-        return res.status(400).send({ error: product, message: 'Please provide Product information' }); }
-    connection.query("UPDATE Product set ? WHERE ProductID = ?",[product,product_id], function (error, results) {
-        if (error) throw error;
-        return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
-    });
-});
-
-// update product in stock can update follow by stockID 
-router.put('/updateStock', (req,res) => {
-    const stock_id = req.body.id;
-    const stock = req.body.userData;
+    const product_id = req.body.id;
+    const product = req.body.productData;
  
-    if (!stock_id || !stock) {
-         return res.status(400).send({ error: stock, message: 'Please provide Product information' }); }
-     connection.query("UPDATE Stock set ? WHERE StockID = ?",[stock,stock_id], function (error, results) {
+    if (!product_id || !product) {
+         return res.status(400).send({ error: admin, message: 'Please provide Product information' }); }
+     connection.query("UPDATE Product set ? WHERE ProductID = ?",[product,product_id], function (error, results) {
          if (error) throw error;
          return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
      });
  });
+
 
 // delete product (from stock and product table)
 router.delete('/deleteProduct', (req,res) =>{
@@ -161,14 +144,11 @@ router.delete('/deleteProduct', (req,res) =>{
   if (!product_id){
     return res.status(400).send({ error: true, message: 'Please provide product_id' });
   }
-  connection.query('DELETE FROM Stock WHERE ProductID = ?', [product_id], function (error, results) {
-    if (error) throw error;
-    return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted from "Stock" successfully.' });
-  });
-  connection.query('DELETE FROM Product WHERE ProductID = ?',[product_id],function (error, results) {
+  connection.query('DELETE FROM Product WHERE ProductID = ?', [product_id], function (error, results) {
     if (error) throw error;
     return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted successfully.' });
   });
+
 });
 
 // advance search (passs)
@@ -229,13 +209,7 @@ router.post('/admin', (req, res) => {
     });
 });
 
-// select allAdmin
-router.get('/AllAdmin', (req, res) => {
-    connection.query("Select * from Admins", function (error, results) {
-        if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Admin list.' });
-    });
-});
+
 
 // update admin
 router.put('/updateAdmin', (req,res) => {
@@ -297,13 +271,7 @@ router.post('/User', (req, res) => {
 });
 
 
-// select allAUser
-router.get('/AllUsers', (req, res) => {
-    connection.query("Select * from Users", function (error, results) {
-        if (error) throw error;
-        return res.send({ error: false, data: results, message: 'User list.' });
-    });
-});
+
 
 // update user
 router.put('/updateUser', (req,res) => {
@@ -331,7 +299,6 @@ router.delete('/deleteUser', (req,res) =>{
     });
 });
 
-// search
 
 
 app.listen(process.env.PORT, function() {
