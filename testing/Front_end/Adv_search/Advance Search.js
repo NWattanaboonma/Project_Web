@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('.AdvanceSearch form');
-    const nameInput = document.getElementById('Name');
-    const colorInput = document.getElementById('ID');
-    const collectionInput = document.getElementById('Price');
+    // const form = document.querySelector('.AdvanceSearch form');
+    // const nameInput = document.getElementById('Name');
+    // const colorInput = document.getElementById('ID');
+    // const collectionInput = document.getElementById('Price');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    // form.addEventListener('submit', function (event) {
+    //     event.preventDefault();
 
-        const name = nameInput.value;
-        const color = colorInput.value;
-        const collection = collectionInput.value;
+        const name = "Rich as hell";
+        const color = "Black";
+        const collection = 790;
         
-        const url = 'http://localhost:3000/adsearch';
+        const url = 'http://localhost:2021/adsearch';
+
 
         // Make a POST request to the server
         fetch(url, {
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ Name: name, ID: color, Price: collection })
+            body: JSON.stringify({ Name: name, Color: color, Price: collection })
         })
             .then(function (response) {
                 if (!response.ok) {
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(function (error) {
                 console.error('There was a problem with the fetch operation:', error);
             });
-
-    });
- 
 });
+ 
+// });

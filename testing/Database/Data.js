@@ -180,17 +180,19 @@ router.delete('/deleteProduct', (req,res) =>{
 });
 
 // advance search (passs)
-router.post('/adsearch/:name/:color/:collection', (req, res) => {
-    const { name, color, collection } = req.params;
+router.post('/adsearch', (req, res) => {
+    const name = req.body.Name;
+    const color = req.body.Color;
+    const price = req.body.Price;
   
     const sql = `
       SELECT * FROM Product 
-      WHERE ProductName LIKE ? AND Color LIKE ? AND Collection LIKE ?
+      WHERE ProductName LIKE ? AND Color LIKE ? AND Price LIKE ?
     `;
 
-    const params = [`%${name}%`, `%${color}%`, `%${collection}%`];
+    // const params = [`%${name}%`, `%${color}%`, `%${collection}%`];
 
-    connection.query(sql, params, (error, results) => {
+    connection.query(sql, [name,color,price], (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             return res.status(500).json({ error: 'Internal Server Error' });
