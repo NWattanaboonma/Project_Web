@@ -1,5 +1,5 @@
 function using(){
-    fetch('http://localhost:2021/List_Products', {
+    fetch('http://localhost:2021/List_Product', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -12,11 +12,22 @@ function using(){
         console.log(products);
         for (var i=0; i<products.length; i++){
             const product = products[i];
-            const picture = product.picture;
-            const collection = product.collection;
+            console.log(product[i]);
             const name = product.name;
-            const color = product.color;
+            const collection = product.collection;
+            const material = product.material;
+            const picture = product.picture;
             const price = product.price;
+            const color = product.color;
+            const description=product.description;
+            const sizeS = product.size_S;
+            const sizeM = product.size_M;
+            const sizeL = product.size_L;
+            const sizeXL = product.size_XL;
+            const sizeXXL = product.size_XXL;
+            const sizeSuperXL = product.size_superXL;
+            const quantity = product.quantity;
+        
 
             document.getElementById("list").innerHTML += 
                 `<div class='box'>
@@ -29,6 +40,7 @@ function using(){
                         </div>
                     </div>
                     <button class="edit-button">Edit</button>
+                    
                 </div>`;
         }
     })
@@ -36,3 +48,8 @@ function using(){
         console.error('Error fetching data:', error); 
     });
 }
+function updateproduct(data){
+    console.log(data)
+    localStorage.setItem("product_id",data);
+    window.location.href="/Product_List.html";
+  }
