@@ -4,15 +4,16 @@ class NavBar extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = `<nav class="Menu">
+        this.innerHTML = `
+        <nav class="Menu">
         <div class="catagorize">
         <div class="Hypelogo">
         <a href="/" class ="logo_hyper_home_page black ">HYPEGEAR</a> 
         </div>
         <div class="Hypefunction">
         <a href="/" class="line space_between white"> Home</a>
-        <a href="/you_be_Troll" class="line space_between white"> Guess the new Collection </a>
-        <a  href="/" class="line space_between white"> Sale </a>
+        <a href="/Guess" class="line space_between white"> Guess the new Collection </a>
+        <div id="ya" class="line space_between white"> Sale </div>
         <a href="/Support" class="line space_between white"> Support </a>
         </div>
         <div class="searchbox">
@@ -175,6 +176,9 @@ class NavBar extends HTMLElement {
         display: flex;
         justify-content: space-evenly;
     }
+    #ya{
+        cursor: pointer;
+    }
     </style> 
         `;
     // import than you can't put the html in from the scipt in the script using the document create the get script nect step using the append child to add the script element after innerhtml
@@ -193,9 +197,14 @@ class NavBar extends HTMLElement {
             localStorage.setItem("Search_Data",data);
             window.location.href = "/Search_showproducts";
         }
+    const click_it = document.getElementById("ya");
+        click_it.addEventListener("click", function(event){
+            alert("There are no any Products sale Yet See you in a Winter!!!!!♥");
+        });
     `;
     this.appendChild(script);
     }
+    
 }
 
 customElements.define('navbar-component', NavBar);
@@ -219,5 +228,3 @@ class Footer extends HTMLElement {
 
 
 customElements.define('footer-component', Footer);
-
-
