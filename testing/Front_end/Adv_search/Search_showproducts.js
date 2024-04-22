@@ -99,4 +99,3 @@ function gotodetail(d) {
     const url = "/product.html?"+ queryString;;
     window.location.href = url
 }
-
