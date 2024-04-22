@@ -126,12 +126,6 @@ router.get('/product/:product_id', (req, res) => {
 });
 
 // select all Product
-router.get('/AllProduct', (req, res) => {
-    connection.query("Select * from Product", function (error, results) {
-        if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Product list.' });
-    });
-});
 
 // insert product *** fix / ***
 
@@ -183,26 +177,25 @@ router.delete('/deleteProduct', (req,res) =>{
 router.post('/adsearch', (req, res) => {
     const name = req.body.Name;
     const color = req.body.Color;
-    const price = req.body.Price;
+    const collection = req.body.Collection;
   
     const sql = `
       SELECT * FROM Product 
-      WHERE ProductName LIKE ? AND Color LIKE ? AND Price LIKE ?
+      WHERE ProductName LIKE ? AND Color LIKE ? AND Collection LIKE ?
     `;
 
-    // const params = [`%${name}%`, `%${color}%`, `%${collection}%`];
 
-    connection.query(sql, [name,color,price], (error, results) => {
+    connection.query(sql, [name,color,collection], (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             return res.status(500).json({ error: 'Internal Server Error' });
         }
         
         if (results.length === 0) {
-            return res.status(404).json({ error: true, message: 'No products found' });
+            return res.status(201).json({ error: true, message: 'No products found' });
         }
-
-        res.json({ error: false, data: results, message: 'Products search successful' });
+        const product = results[0]; 
+        return res.send({ error: false, data: product, message: 'Products search successful' });
     });
 });
 

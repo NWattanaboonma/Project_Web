@@ -20,20 +20,21 @@ body {
     flex-direction: row;
     /* width: 1400px; */
     /* max-width: 100%; */
-    /* background-color: #D0C09E ; */
+    background-color: white ;
     flex:1;
+    row-gap: 15px;
 }
 .textbox{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
-    border: black 3px solid;
+    border: #D0C09E 3px solid;
     border-radius: 10px;
 }
 
@@ -42,22 +43,26 @@ body {
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .textbox3{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 
 .textbox4{
@@ -65,55 +70,65 @@ body {
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .textbox5{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .textbox6{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .textbox7{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .textbox8{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 15.1cm;
+    height: 14.8cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: #D0C09E 3px solid;
+    border-radius: 10px;
 }
 .detail {
     text-align: center;
@@ -129,6 +144,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .buy {
@@ -148,3 +164,4 @@ body {
 .h3{
     margin-bottom: 0px;
 }
+
