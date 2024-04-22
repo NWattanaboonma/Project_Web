@@ -33,8 +33,8 @@ function using(){
 });
 
 }
-function updatadmin(data){
+function updateadmin(data){
   console.log(data)
-  localStorage.setItem("admin_id",infro);
+  localStorage.setItem("admin_id",data);
   window.location.href="/Admin_detail";
 }

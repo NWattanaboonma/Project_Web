@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("admin_id")
-    
+    console.log(email)
     console.log({ id: email})
     
     fetch('http://localhost:2021/admin', {
