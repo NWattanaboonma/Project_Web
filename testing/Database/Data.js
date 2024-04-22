@@ -107,8 +107,8 @@ router.post('/login', (req, res) => {
 
 
 // select :detail product click image then pull information to front end (passsss)
-router.get('/product/:product_id', (req, res) => { 
-    const productId = req.params.product_id;
+router.get('/product', (req, res) => { 
+    const productId = req.body.product_id;
 
     connection.query('SELECT * FROM Product WHERE ProductID = ?', productId, function (error, results) {
         if (error) {
@@ -125,9 +125,7 @@ router.get('/product/:product_id', (req, res) => {
     });
 });
 
-// select all Product
 
-// insert product *** fix / ***
 
   
 // update product (from table product) (can not use)

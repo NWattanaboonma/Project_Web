@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const mt=List.Meterial
                 const price=List.Price
                 const id = List.ProductID
-                const d= String("'"+id+"'")
+                const d = String("'"+id+"'")
                 localStorage.setItem(`${id}`,id);
                 if(Data===Name){
                     Check=false;
                     document.getElementById("store").innerHTML+=`
-                    <div class="textbox" onclick="gotodetail(d)">
+                    <div class="textbox" onclick="gotodetail(${d})">
                     <img src=${img} class="imgproducts">
                     <div class="detail">
                         <h3><b>${Name}<br>${mt}</b></h3>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }else if(Data===Collection){
                     Check=false;
                     document.getElementById("store").innerHTML+=`
-                    <div class="textbox" onclick="gotodetail(d)">
+                    <div class="textbox" onclick="gotodetail(${d})">
                     <img src=${img} class="imgproducts">
                     <div class="detail">
                         <h3><b>${Name}<br>${mt}</b></h3>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }else if(Data===Color){
                     Check=false;
                     document.getElementById("store").innerHTML+=`
-                    <div class="textbox" onclick="gotodetail(d)">
+                    <div class="textbox" onclick="gotodetail(${d})">
                     <img src=${img} class="imgproducts">
                     <div class="detail">
                         <h3><b>${Name}<br>${mt}</b></h3>
@@ -71,8 +71,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     const img=List.Image
                     const mt=List.Meterial
                     const price=List.Price
+                    const id = List.ProductID
+                    const d = String("'"+id+"'")
+                    localStorage.setItem(`${id}`,id);
                     document.getElementById("store").innerHTML+=`
-                    <div class="textbox" onclick="gotodetail(d)">
+                    <div class="textbox" onclick="gotodetail(${d})">
                     <img src=${img} class="imgproducts">
                     <div class="detail">
                         <h3><b>${Name}<br>${mt}</b></h3>
@@ -89,6 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function gotodetail(d) {
-    window.location.href = "/product.html";
+    const data = {
+        "ID": d
+    }
+    const queryString = new URLSearchParams(data).toString();
+    const url = "/product.html?"+ queryString;;
+    window.location.href = url
 }
 
