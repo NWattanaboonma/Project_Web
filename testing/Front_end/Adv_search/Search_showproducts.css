@@ -20,18 +20,21 @@ body {
     flex-direction: row;
     /* width: 1400px; */
     /* max-width: 100%; */
-    background-color: #D0C09E ;
+    /* background-color: #D0C09E ; */
+    flex:1;
 }
 .textbox{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 50%;
-    justify-content: space-around                                         ;
+    height: 15.1cm;
+    justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 1rem;
+    border: black 3px solid;
+    border-radius: 10px;
 }
 
 .textbox2{
@@ -39,7 +42,7 @@ body {
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 50%;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
@@ -50,7 +53,7 @@ body {
     flex-wrap: wrap;
     width: 25%;
     background-color: #E6E5E0;
-    height: 50%;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
@@ -61,57 +64,64 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
-    height: 50%;
+    background-color: #E6E5E0;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .textbox5{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
-    height: 50%;
+    background-color: #E6E5E0;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .textbox6{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
-    height: 50%;
+    background-color: #E6E5E0;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .textbox7{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
-    height: 50%;
+    background-color: #E6E5E0;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .textbox8{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    background-color: gray;
-    height: 50%;
+    background-color: #E6E5E0;
+    height: 15.1cm;
     justify-content: center;
     align-items: baseline;
     text-align: center;
+    padding: 1rem;
 }
 .detail {
     text-align: center;
     /* background-color: antiquewhite; */
     padding-left: 10%;
     padding-right: 10%;
+    max-height: 7cm;
+    height: fit-content;
 }
 
 
