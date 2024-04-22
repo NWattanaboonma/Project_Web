@@ -71,6 +71,7 @@ call('List','List_admin.html','/List_Admin')
 call('List','Admin_detail.html','/Admin_detail')
 call('List','user_list.html','/user_list')
 call("List_Product",'List_product.html','/List_product')
+call('List','Admin_detail_add.html','/Admin_detail_add')
 
 // Product
 call('product','product.html','/Detail')
@@ -85,7 +86,7 @@ call('product','product.html','/Detail')
 // + process.env.PORT);
 // });
 
-
+// Add admin
 
 Project_web.listen(port, () => {
     console.log(`Server listening on port: ${port}`)

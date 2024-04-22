@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="/Nav/nav.js"></script>
     <link rel="stylesheet" href="/Admin_detail.css">
+    <script src="/Admin_detail_add.js"></script>
 </head>
 <body>
     <navbar-component></navbar-component>
@@ -16,8 +17,9 @@
             <label for="adID">AdminID: <input type="text" id="adID"></label>
             <label for="username">Username: <input type="text" id="username"></label>
             <label for="roles">Roles: <input type="text" id="roles"></label>
-            <label for="phone">AdEmail: <input type="text" id="phone"></label>
+            <label for="email">AdEmail: <input type="text" id="email"></label>
             <label for="password">AdminPassword: <input type="text" id="password"></label>
+            <button type="submit" onclick="insertadmin()">Add</button>
         </form>
     </div>
     <footer-component></footer-component>

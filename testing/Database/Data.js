@@ -249,7 +249,7 @@ router.get('/AllAdmin', (req, res) => {
 // update admin
 router.put('/updateAdmin', (req,res) => {
     const admin_id = req.body.id;
-    const admin = req.body.adminData;
+    const admin = req.body.userData;
  
     if (!admin_id || !admin) {
          return res.status(400).send({ error: admin, message: 'Please provide Admin information' }); }
@@ -260,8 +260,8 @@ router.put('/updateAdmin', (req,res) => {
  });
 
 // delete admin
-router.delete('/deleteAdmin/:id', (req,res) =>{
-    const admin_id = req.params.id;
+router.delete('/deleteAdmin', (req,res) =>{
+    const admin_id = req.body.id;
   
     if (!admin_id){
       return res.status(400).send({ error: true, message: 'Please provide admin_id' });
