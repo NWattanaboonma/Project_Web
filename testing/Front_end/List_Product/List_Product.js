@@ -14,6 +14,7 @@ function using(){
             const product = products[i];
             // const product = products;
             // console.log(product[i]);
+            const ID = product.ProductID;
             const name = product.ProductName;
             const collection = product.Collection;
             const material = product.Meterial;
@@ -28,7 +29,7 @@ function using(){
             const sizeXXL = product.size_XXL;
             const sizeSuperXL = product.size_superXL;
             const quantity = product.Quantity;
-        
+            const data = String("'"+ID+"'");
 
             document.getElementById("list").innerHTML += 
                 `<div class='box'>
@@ -36,14 +37,14 @@ function using(){
                     <div class="product-info">
                         
                         <div class="product-details">
-                            <p><span class="name">${name}</span>,<span class="collection">Collection: ${collection}</span></p>
+                            <p><span class="id">${ID}</span>,<p><span class="name">${name}</span>,<span class="collection">Collection: ${collection}</span></p>
                             <p><span class="color">Color: ${color}</span>, Material: ${material}</p>
                             <p class="price">Price: ${price}฿</p><p class="Des">Description: ${description}</p>
                             <p class="sizes">SizeS:${sizeS},SizeM:${sizeM},SizeL:${sizeL},SizeXL:${sizeXL}</p>
                             <p class="bsize">SizeXXL:${sizeXXL},SizeSuperXL:${sizeSuperXL},Quantity: ${quantity}</p>
-                        </div>
+                        </div>  
                     </div>
-                    <button class="edit-button">Edit</button>
+                    <button id="edit" onclick="editproduct(${data})">Edit</button>
                     
                 </div>`;
         }
@@ -52,8 +53,8 @@ function using(){
         console.error('Error fetching data:', error); 
     });
 }
-function updateproduct(data){
-    console.log(data)
-    localStorage.setItem("product_id",data);
-    window.location.href="/Product_List.html";
+function editproduct(products){
+    
+    localStorage.setItem("edit",products);
+    window.location.href="/edit_product.html";
   }

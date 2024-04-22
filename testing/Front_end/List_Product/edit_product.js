@@ -89,3 +89,9 @@ function getProductIdFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('id');
 }
+
+function edit(infro){
+    console.log(infro)
+    localStorage.setItem("User_id",infro);
+    window.location.href="/user_list";
+} 

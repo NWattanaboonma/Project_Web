@@ -142,7 +142,7 @@ router.put('/updateProduct', (req,res) => {
 });
 
 // update product in stock can update follow by stockID 
-router.put('/updateStock', (req,res) => {
+router.put('/updateProduct', (req,res) => {
     const stock_id = req.body.id;
     const stock = req.body.userData;
  
