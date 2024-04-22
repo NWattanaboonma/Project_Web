@@ -43,7 +43,14 @@ router.get('/List_User', (req, res) => {
             return res.send({ error: false, data: results});
         });
 });
-
+// get all Product
+router.get('/List_Product', (req, res) => {
+    const sql = 'select * from Product;';
+        connection.query( sql, function (error, results) {
+        if (error) throw error;
+            return res.send({ error: false, data: results});
+        });
+});
 
 //register (passsss)
 router.post('/register', (req, res) => {
@@ -211,8 +218,8 @@ router.post('/insertAdmin', (req, res) => {
 });
 
 // select admin
-router.get('/admin/:adminID', (req, res) => {
-    const adminId = req.params.adminID;
+router.get('/admin', (req, res) => {
+    const adminId = req.body.id;
 
     connection.query('SELECT * FROM Admins WHERE AdminID = ?', adminId, function (error, results) {
         if (error) {
@@ -319,8 +326,8 @@ router.put('/updateUser', (req,res) => {
  });
 
 // delete user
-router.delete('/deleteUser/:email', (req,res) =>{
-    const user_email = req.params.email;
+router.delete('/deleteUser', (req,res) =>{
+    const user_email = req.body.id;
   
     if (!user_email){
       return res.status(400).send({ error: true, message: 'Please provide user_email' });
