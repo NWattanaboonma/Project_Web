@@ -22,7 +22,7 @@ body {
     /* max-width: 100%; */
     background-color: #D0C09E ;
 }
-.textbox1{
+.textbox{
     display: flex;
     flex-wrap: wrap;
     width: 25%;
@@ -133,4 +133,8 @@ body {
 
 .buy:hover {
     background-color: grey;
+}
+
+.h3{
+    margin-bottom: 0px;
 }
