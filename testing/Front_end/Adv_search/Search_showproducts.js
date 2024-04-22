@@ -20,18 +20,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 const Name = List.ProductName
                 const Collection = List.Collection
                 const Color= List.Color
-
+                const img=List.Image
+                const mt=List.Meterial
+                const price=List.Price
                 if(Data===Name){
                     Check=false;
-                    // <div class="textbox1">
-                    //     <img src="https://drive.google.com/thumbnail?id=1uZycBw4U-fPuwQcq5VmWrw5Qt3r0ohay" class="imgproducts">
-                    //     <div class="detail">
-                    //         <h3><b>Mr.Bloom<br>(graphic t-shirt)</b></h3>
-                    //         <h3>Black</h3>
-                    //         <h3>790 Baht</h3>
-                    //         <button class="buy">Buy</button>
-                    //     </div>
-                    // </div>
+                    document.getElementById("store").innerHTML=`
+                    <div class="textbox">
+                    <img src=${img} class="imgproducts">
+                    <div class="detail">
+                        <h3><b>${Name}<br>(graphic t-shirt)</b></h3>
+                        <h3>Black</h3>
+                        <h3>790 Baht</h3>
+                        <button class="buy">Buy</button>
+                    </div>
+                    </div>`;
                 }else if(Data===Collection){
                     Check=false;
                     console.log("Collection")
