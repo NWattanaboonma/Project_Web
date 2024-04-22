@@ -24,6 +24,7 @@ form {
     padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: antiquewhite;
 }
 
 label {
@@ -40,8 +41,8 @@ input[type="number"] {
     border-radius: 5px;
 }
 
-button[type="submit"],
-button[type="button"] {
+
+button {
     background-color: black;
     color: white;
     padding: 0.5rem 1rem;
@@ -51,19 +52,22 @@ button[type="button"] {
     transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover,
-button[type="button"]:hover {
+button:hover,
+button:hover {
     background-color: lightgrey;
 }
 
-button[type="submit"] {
+#updateBtn {
     margin-right: 1rem;
 }
 
-button[type="button"] {
+#deleteBtn {
     background-color: black;
 }
 
-button[type="button"]:hover {
+#deleteBtn:hover {
     background-color: lightgrey;
+}
+.br{
+    margin: 8rem;
 }

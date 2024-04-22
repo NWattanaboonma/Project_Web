@@ -9,67 +9,62 @@
     <script src="/Product_list.js"></script>
 </head>
 <body>
-    <h1>Edit Product</h1>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <h1 id="Manow">Edit Product</h1>
     <!-- <div class="product-image-container">
         <img src="" alt="Product Image" id="productImage">
     </div> -->
     <form id="editForm">
         <label for="ProductID">Product ID:</label>
-        <input type="text" id="ProductID" name="cProductID"><br><br>
+        <input type="text" id="ProductID" name="ProductID" required><br><br>
 
         <label for="productName">Product Name:</label>
-        <input type="text" id="productName" name="productName"><br><br>
+        <input type="text" id="productName" name="productName" required><br><br>
         
         <label for="collectionName">Collection Name:</label>
-        <input type="text" id="collectionName" name="collectionName"><br><br>
+        <input type="text" id="collectionName" name="collectionName" required><br><br>
         
         <label for="Material">Material:</label>
-        <input type="text" id="Material" name="Material"><br><br>
+        <input type="text" id="mt" name="Material"><br><br>
         
         <label for="productPrice">Price:</label>
-        <input type="number" id="productPrice" name="productPrice"><br><br>
+        <input type="number" id="productPrice" name="productPrice" required><br><br>
         
         <label for="ProductDescription">Product Description:</label>
         <input type="text" id="ProductDescription" name="ProductDescription"><br><br>
 
         <label for="sizeS">Size-S:</label>
-        <input type="text" id="sizeS" name="sizeS"><br><br>
+        <input type="text" id="sizeS" name="sizeS" required><br><br>
 
         <label for="sizeM">Size-M:</label>
-        <input type="text" id="sizeM" name="sizeM"><br><br>
+        <input type="text" id="sizeM" name="sizeM" required><br><br>
 
         <label for="sizeL">Size-L:</label>
-        <input type="text" id="sizeL" name="sizeL"><br><br>
+        <input type="text" id="sizeL" name="sizeL" required><br><br>
 
         <label for="sizeXL">Size-XL:</label>
-        <input type="text" id="sizeXL" name="sizeXL"><br><br>
+        <input type="text" id="sizeXL" name="sizeXL" required><br><br>
 
         <label for="sizeXXL">Size-XXL:</label>
-        <input type="text" id="sizeXXL" name="sizeXXL"><br><br>
+        <input type="text" id="sizeXXL" name="sizeXXL" required><br><br>
 
         <label for="sizeSuperXL">Size-SuperXL:</label>
-        <input type="text" id="sizeSuperXL" name="sizeSuperXL"><br><br>
+        <input type="text" id="sizeSuperXL" name="sizeSuperXL" required><br><br>
 
         <label for="quantity">Quantity:</label>
-        <input type="text" id="quantity" name="quantity"><br><br>
+        <input type="text" id="quantity" name="quantity" required><br><br>
 
         <label for="productColor">Product Color:</label>
-        <input type="text" id="productColor" name="productColor"><br><br>
+        <input type="text" id="productColor" name="productColor" required><br><br>
 
         <label for="productImage">Product Image(string):</label>
         <input type="text" id="productImage" name="productImage"><br><br>
 
-        <button type="submit" onclick="insertproduct()" id="add">Add</button>
+        <button type="submit"  onclick="insertproduct()" id="insert">Add</button>
 
-        </form>
+    </form>
+
     <footer-component></footer-component>
-    <script>
-        document.getElementById("add").addEventListener("click", function() {
-           // Perform update operation
-
-           // Redirect to the list page after successful update
-           window.location.href = "/List_Product.html";
-       });
-   </script>
 </body>
 </html>
