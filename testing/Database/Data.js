@@ -102,6 +102,18 @@ router.post('/login', (req, res) => {
     }); 
 });
 
+// insert product
+router.post('/insertProduct', (req, res) => {
+    let product = req.body.productData;
+
+    if (!product) {
+        return res.status(400).send({ error: true, message: 'Please provide Product information' });
+    }
+    connection.query("INSERT INTO Product SET ? ", product, function (error, results) {
+        if (error) throw error;
+        return res.send({error: false, data: results.affectedRows, message: 'New product has been created successfully.'});
+    });
+});
 
 // select :detail product click image then pull information to front end (passsss)
 router.post('/product', (req, res) => { 
