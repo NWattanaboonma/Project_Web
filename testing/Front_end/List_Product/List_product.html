@@ -13,6 +13,7 @@
     <h1>Products List</h1>
 
     <div class="div_center">
+        <button id="Add" >Add</button>
         <div class="container">
             <div class="header">
                 <div class="Num">Products</div>
@@ -32,7 +33,12 @@
             using(); 
             // updateadd(data);
         });
+        document.getElementById("Add").addEventListener("click", function() {
+            // Perform update operation
 
+            // Redirect to the list page after successful update
+            window.location.href = "/Product_List.html";
+        });
     </script>
 </body>
 </html>
