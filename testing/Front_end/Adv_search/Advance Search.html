@@ -15,7 +15,7 @@
 
 <div class="AdvanceSearch">
     <div class="half">
-        <form>
+        <form id="form">
             <label for="Advance_Search"><h1><b>Advance Search</b><br></h1></label>
             <label for = "Name"><b>Name: </b></label>
             <input type = "text" id = "Name"  required><br>
@@ -23,20 +23,10 @@
             <input type = "text" id = "Color"  required><br>
             <label for = "Price"><b>collection:</b></label>
             <input type = "text" id = "collection"  required><br>
-            <button class="button-35" type="submit" id="submit" onclick="Find()">SEARCH</button>
+            <button class="button-35" type="submit" id="submit" >SEARCH</button>
         </form>
     </div>
-    <div class="half">
-        <div class="Product">
-            <img src = "https://drive.google.com/thumbnail?id=14AbGzclpw7Yx-3ZczZCXeh59PlJAomxR" class = "imgproducts" >
-            <div class="info">
-                <div id="collection"><b><br>Rich as hell<br>(graphic t-shirt)</b></div>
-                    <div id="color">Black</div>
-                    <div id="price">790 Baht<br></div>
-                    <button class="button-35" role="button">buy</button>
-                </div>
-                <!-- <div class="but"><button class="button-35" role="button">buy</button></div> -->
-            </div>
+    <div id="show" class="half">
     </div>
 </div>
 </div>
