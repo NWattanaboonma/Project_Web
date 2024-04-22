@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 function updateuser() {
     // Get user information from input fields
     const email = localStorage.getItem("User_id")
@@ -39,7 +38,7 @@ function updateuser() {
  // const email = document.getElementById("newEmail").value;
     const userData = {
         "FName": firstName,
-        "FName": lastName,
+        "LName": lastName,
         "Age": age,
         "Phone": phone
     };

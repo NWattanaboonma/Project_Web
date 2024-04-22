@@ -2,39 +2,57 @@
 document.addEventListener("DOMContentLoaded", function() {
     const Data = localStorage.getItem("Search_Data");
     console.log(Data)
-    document.getElementById("ss").value=Data
+    
+    fetch('http://localhost:2021/List_Product', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        })
+        .then(result => result.json())
+        .then(data => {
+            // console.log(data); 
+            const infro = data.data;
+            var Check=true;
+            console.log(infro);
+            for (var i=0;i<infro.length;i++){
+                const List=infro[i]
+                const Name = List.ProductName
+                const Collection = List.Collection
+                const Color= List.Color
+
+                if(Data===Name){
+                    Check=false;
+                    // <div class="textbox1">
+                    //     <img src="https://drive.google.com/thumbnail?id=1uZycBw4U-fPuwQcq5VmWrw5Qt3r0ohay" class="imgproducts">
+                    //     <div class="detail">
+                    //         <h3><b>Mr.Bloom<br>(graphic t-shirt)</b></h3>
+                    //         <h3>Black</h3>
+                    //         <h3>790 Baht</h3>
+                    //         <button class="buy">Buy</button>
+                    //     </div>
+                    // </div>
+                }else if(Data===Collection){
+                    Check=false;
+                    console.log("Collection")
+                }else if(Data===Color){
+                    Check=false;
+                    console.log("Color")
+                }
+            }
+            if(Check){
+                console.log("in")
+                for (var i=0;i<infro.length;i++){
+                    // const List=infro[i]
+                    // const Name = List.ProductName
+                    // const Collection = List.Collection
+                    // const Color= List.Color
+                    console.log("working");
+                };
+            }
+        })
+    .catch(error => {
+        console.error('Error fetching data:', error); 
+    });
 });
 
-// function displayProducts(filteredProducts) {
-//     var productsContainer = document.querySelector(".products");
-//     productsContainer.innerHTML = ""; 
-
-//     filteredProducts.forEach(function(product) {
-//         var productDiv = document.createElement("div");
-//         productDiv.classList.add("product");
-
-//         productDiv.innerHTML = `
-//             <h3>${product.name}</h3>
-//             <p>Collection: ${product.collection}</p>
-//             <p>Color: ${product.color}</p>
-//             <button class="buy">Buy</button>`;
-//         productsContainer.appendChild(productDiv);
-//     });
-// }
-
-// function searchProducts() {
-//     var nameInput = document.getElementById("nameInput").value.toLowerCase();
-//     var collectionInput = document.getElementById("collectionInput").value.toLowerCase();
-//     var colorInput = document.getElementById("colorInput").value.toLowerCase();
-
-//     var filteredProducts = products.filter(function(product) {
-//         return (
-//             product.name.toLowerCase().includes(nameInput) &&
-//             product.collection.toLowerCase().includes(collectionInput) &&
-//             product.color.toLowerCase().includes(colorInput)
-//         );
-//     });
-
-//     displayProducts(filteredProducts);
-// }
-// displayProducts(products);

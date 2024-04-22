@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(data); 
         const infro = data.data;
 
-        document.getElementById("fname").value=infro.FName
-        document.getElementById("lname").value=infro.LName
-        document.getElementById("bt").value=infro.UserEmail
-        document.getElementById("phone").value=infro.Age
-        document.getElementById("email").value=infro.Phone
+        document.getElementById("adID").value=infro.AdminID
+        document.getElementById("username").value=infro.Username
+        document.getElementById("roles").value=infro.Roles
+        document.getElementById("phone").value=infro.AdEmail
+        document.getElementById("password").value=infro.AdminPassword
     })
     .catch(error => {
         console.error('Error fetching data:', error); 

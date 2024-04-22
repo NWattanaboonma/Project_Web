@@ -1,9 +1,9 @@
-// For slow the process to see the console.log that our function is working
+//For slow the process to see the console.log that our function is working
 // document.addEventListener("DOMContentLoaded", function() {
-//   document.getElementById("Sign_in").addEventListener("click", registerForm);
+// document.getElementById("Sign_in").addEventListener("click", registerForm);
 // });
 
-function logincheck() {
+function registerForm() {
   const fname = document.getElementById("Fame").value; 
   const lname = document.getElementById("Lame").value; 
   const email = document.getElementById("email").value;
@@ -36,7 +36,7 @@ function logincheck() {
     return response.json();
   })
   .then(data => {
-    console.log(data); 
+    window.location.href="/"
   })
   .catch(error => {
     console.error('Error registering user:', error); 

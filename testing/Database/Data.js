@@ -43,7 +43,14 @@ router.get('/List_User', (req, res) => {
             return res.send({ error: false, data: results});
         });
 });
-
+// get all Product
+router.get('/List_Product', (req, res) => {
+    const sql = 'select * from Product;';
+        connection.query( sql, function (error, results) {
+        if (error) throw error;
+            return res.send({ error: false, data: results});
+        });
+});
 
 //register (passsss)
 router.post('/register', (req, res) => {
