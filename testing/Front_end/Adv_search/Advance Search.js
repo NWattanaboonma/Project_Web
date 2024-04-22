@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('form');
 
@@ -29,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const Price = Detail.Price;
             const Img = Detail.Image;
             const color = Detail.Color; 
+            const di = Detail.ProductID;
+            // const uq = String("'"+di+"'")
                 document.getElementById('show').innerHTML=` 
                 <div class="Product">
                 <img src = ${Img} class = "imgproducts" >
@@ -36,13 +40,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div id="collection"><b><br>${Name}<br>${mt}</b></div>
                         <div id="color">${color}</div>
                         <div id="price">${Price} Baht<br></div>
-                        <button class="button-35" type="button" onclick=''>buy</button>
+                        <button class="button-35" type="submit" onclick="gotodetail('${di}')">buy</button>
                     </div>
                 </div>
-            </div>`
+            </div>`;
         })
         .catch(error => {
             console.error('Error fetching data:', error);
         });
     });
 });
+function gotodetail(d) {
+    console.log(d)
+    const data = {
+        "ID": d
+    }
+    const queryString = new URLSearchParams(data).toString();
+    const url = "/product.html?"+ queryString;;
+    window.location.href = url
+}
