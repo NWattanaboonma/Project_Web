@@ -1,8 +1,7 @@
-// /User
 document.addEventListener("DOMContentLoaded", function() {
     const id = localStorage.getItem("edit")
     
-    
+    // show the product detail
     fetch('http://localhost:2021/product', {
         method: 'POST',
         headers: {
@@ -58,20 +57,16 @@ function updateproduct() {
         throw new Error("Failed to update user information");
     })
     .then(data => {
-        // Handle successful update (e.g., display success message)
-        // console.log("User information updated successfully:", data);
         window.location.href='/List_product'; 
     })
     .catch(error => {
-        // Handle error (e.g., display error message)
         console.error("Error updating user information:", error);
     });
 }
 
 function deleteproduct() {
-    // Get user information from input fields
-    const id = localStorage.getItem("edit")
 
+    const id = localStorage.getItem("edit")
 
     fetch('http://localhost:2021/deleteProduct', {
         method: 'DELETE',

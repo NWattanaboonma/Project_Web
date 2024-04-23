@@ -14,7 +14,7 @@ function insertproduct() {
         const sizeXXL = document.getElementById("sizeXXL").value;
         const sizeSuperXL = document.getElementById("sizeSuperXL").value;
         const quantity = document.getElementById("quantity").value;
-
+//         important this part check lot of the time you must check carefully
         const productData = {
             "ProductID": id,
             "ProductName": name,
@@ -32,6 +32,7 @@ function insertproduct() {
             "Color": color,
             "Image": image
         };
+        // check the data
         console.log(productData);
 
         fetch("http://localhost:2021/insertProduct", {

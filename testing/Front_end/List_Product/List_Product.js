@@ -13,8 +13,6 @@ function using(){
         console.log(products);
         for (var i=0; i<products.length; i++){
             const product = products[i];
-            // const product = products;
-            // console.log(product[i]);
             const ID = product.ProductID;
             const name = product.ProductName;
             const collection = product.Collection;

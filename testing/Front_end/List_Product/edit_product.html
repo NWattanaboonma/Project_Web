@@ -12,6 +12,8 @@
     <navbar-component></narbar-component>
         <nav class="bar"></nav>
     <h1>Edit Product</h1>
+    <!-- show the detail of that product -->
+    <!-- don't show the picture -->
     <form id="editForm">
         <label for="productName">Product Name:</label>
         <input type="text" id="productName" name="productName"><br><br>
@@ -25,6 +27,7 @@
         <label for="productPrice">Price:</label>
         <input type="number" id="productPrice" name="productPrice"><br><br>
         <div class="middle">
+            <!-- update and delete -->
             <button type="submit" id="updateBtn" onclick="updateproduct()">Update</button>
             <button type="button" id="deleteBtn" onclick="deleteproduct()">Delete</button>
         </div>
