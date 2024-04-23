@@ -1,9 +1,10 @@
-class NavBar extends HTMLElement {
+class NavBar extends HTMLElement { //declares a new class named NavBar which extends HTMLElement
     constructor() {
-        super();
+        super(); // calls the constructor of the parent class (HTMLElement in this case). This is necessary because NavBar is extending HTMLElement
     }
-
+    // lifecycle callback that gets invoked when the custom element is inserted into the DOM (Document Object Model). 
     connectedCallback() {
+        // infromation to learn html 
         this.innerHTML = `
         <nav class="Menu">
         <div class="catagorize">
@@ -43,8 +44,6 @@ class NavBar extends HTMLElement {
         position: fixed;
         z-index: 1;
         background-color: white;
-        // display: flex;
-        // justify-content: space-between;
     } 
     .catagorize{
         display: flex;
@@ -100,7 +99,6 @@ class NavBar extends HTMLElement {
         padding:0 10px;
         font-size:16px;
         width: 350px;
-    
     }
 
     a{
@@ -108,7 +106,6 @@ class NavBar extends HTMLElement {
         padding: 0%;
     }
     
-    /* bc this;-; */
     .logo_hyper_home_page{
         padding: 1rem;
         border: 10cm;
@@ -206,7 +203,7 @@ class NavBar extends HTMLElement {
     }
     
 }
-
+// built-in JavaScript object that provides methods for registering and working with custom elements.
 customElements.define('navbar-component', NavBar);
 
 class Footer extends HTMLElement {
