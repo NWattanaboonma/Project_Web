@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
             body: JSON.stringify({ Name: name, Color: color, Collection: collection })
         })
         .then(response => {
-            if (!response.ok) {
+            if (response.status== 201) {
+                alert("There are no product that you are searching?")
                 throw new Error('Network response was not ok');
             }
             return response.json();
