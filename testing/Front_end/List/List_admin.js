@@ -1,4 +1,5 @@
 function using(){
+  // auto running all the list
   fetch('http://localhost:2021/List_Admin', {
     method: 'GET',
     headers: {
@@ -33,14 +34,11 @@ function using(){
 });
 
 }
+// go to the Admin detail for see the information and updata or kick admin
 function updateadmin(data){
   console.log(data)
   localStorage.setItem("admin_id",data);
   window.location.href="/Admin_detail";
 }
-function insertadmin(data){
-  console.log(data)
-  localStorage.setItem("admin_id",data);
-  window.location.href="/Admin_detail_add";
-}
+
 

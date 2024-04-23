@@ -6,7 +6,6 @@
     <title>List_User</title>
     <script src="/Nav/nav.js"></script>
     <link rel="stylesheet" href="/List_css.css">
-    <script src="Update_Admin.js"></script>
     <script src="List_admin.js"></script>
 </head>
 
@@ -24,6 +23,7 @@
                 <div class="Edit">Edit</div>
             </div>
             <div id="list">
+                <!-- Detail from the js come here -->
             </div>
         </div>
     </div>
@@ -31,15 +31,13 @@
 <footer-component></footer-component>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // loading this using function other hand you can use the DOM Content to replace and don't need the using function
         using(); 
-        // updateadd(data);
     });
     document.getElementById("Add").addEventListener("click", function() {
-            // Perform update operation
-
-            // Redirect to the list page after successful update
+        // wait for to click on the buttion detail
             window.location.href = "/Admin_detail_add.html";
-        });
+    });
 
 
 </script>

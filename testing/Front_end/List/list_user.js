@@ -17,8 +17,8 @@ function using(){
       const email=List.UserEmail
       const Call = List.Phone
       const Age= List.Age
+      // amzing thing that it have the problem that the function in here can get the information directly need to be in string * important "",'' is not same
       const ID = String("'"+email+"'")
-    //   const Bt= List.Birthdate
       document.getElementById("list").innerHTML+=`
       <div class='box'>
       <div id="number">${i+1}</div>
@@ -35,8 +35,10 @@ function using(){
 });
 
 }         
+// go to the detail of the user
 function updateuser(infro){
     console.log(infro)
+    // sent data to cloud for the user_list take it
     localStorage.setItem("User_id",infro);
     window.location.href="/user_list";
 }    

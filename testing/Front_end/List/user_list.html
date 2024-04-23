@@ -18,16 +18,19 @@
 
             <div id="userDetails"></div>
             <form class="add-user-form">
-                <input type="text" placeholder="First Name" id="newFirstName">
-                <input type="text" placeholder="Last Name" id="newLastName">
-                <input type="email" placeholder="Email" id="newEmail" disabled>
-                <input type="number" placeholder="Age" id="age">
-                <input type="number" placeholder="Phone Number" id="PhoneNumber">
-                <button type="submit" onclick="updateuser()">Update</button>
-                <button type="submit" onclick="deleteuser()">Delete</button>
+                <label for="newFirstName">First Namw:<input type="text" placeholder="First Name" id="newFirstName"></label>
+                <label for="newLastName">Last Name:<input type="text" placeholder="Last Name" id="newLastName"></label>
+                <label for="newEmail">Email:<input type="email" placeholder="Email" id="newEmail" disabled></label>
+                <label for="age">Age:<input type="number" placeholder="Age" id="age"></label>
+                <label for="PhoneNumber">Phone:<input type="number" placeholder="Phone Number" id="PhoneNumber">
+                <div class="center">
+                    <button type="submit" id="updateBtn" onclick="updateuser()">Update</button>
+                    <button type="submit" id="deleteBtn" onclick="deleteuser()">Delete</button>
+                </div>
             </form>
         </div>
     </div>
+    <div class="br"></div>
 
     <footer-component></footer-component>
 </body>

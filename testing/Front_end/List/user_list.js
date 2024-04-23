@@ -1,7 +1,6 @@
-// /User
 document.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("User_id")
-    
+    // get information from the cloud
     console.log({ id: email})
     
     fetch('http://localhost:2021/User', {
@@ -35,7 +34,7 @@ function updateuser() {
    
     const age = document.getElementById("age").value;
     const phone = document.getElementById("PhoneNumber").value;
- // const email = document.getElementById("newEmail").value;
+
     const userData = {
         "FName": firstName,
         "LName": lastName,
@@ -49,8 +48,8 @@ function updateuser() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            email: email, // Pass user email for identification
-            userData: userData // Pass user data for update
+            email: email, 
+            userData: userData 
         })
     })
     .then(response => {
@@ -60,18 +59,16 @@ function updateuser() {
         throw new Error("Failed to update user information");
     })
     .then(data => {
-        // Handle successful update (e.g., display success message)
-        // console.log("User information updated successfully:", data);
+        // samething see the to see the list page for see the result
         window.location.href='/List_User'; 
     })
     .catch(error => {
-        // Handle error (e.g., display error message)
         console.error("Error updating user information:", error);
     });
 }
 
 
-
+// delete user
 function deleteuser() {
     // Get user information from input fields
     const email = localStorage.getItem("User_id")

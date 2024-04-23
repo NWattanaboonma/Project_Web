@@ -1,29 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const admin_id = localStorage.getItem("admin_id")
-//     // console.log({ id: email})
-       
-//     fetch('http://localhost:2021/admin', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({ id: admin_id})
-//     })
-//     .then(result => result.json())
-//     .then(data => {
-//         console.log(data); 
-//         const infro = data.data;
-//         document.getElementById("adID").value=infro.AdminID
-//         document.getElementById("username").value=infro.UserName
-//         document.getElementById("roles").value=infro.Roles
-//         document.getElementById("email").value=infro.AdEmail
-//         document.getElementById("password").value=infro.AdminPassword
-//     })
-//     .catch(error => {
-//         console.error('Error fetching data:', error); 
-//     });
-// });
-
 function insertadmin() {
     // Get user information from input fields
     const admin_id = document.getElementById("adID").value;
@@ -31,7 +5,7 @@ function insertadmin() {
     const roles = document.getElementById("roles").value;
     const emails = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-  
+//   set the data easy in put  *impor that Name "AdminID" must be same database or if it not work you can run out in console to see what are there format
     const adminData = {
         "AdminID": admin_id,
         "UserName" : username,
@@ -39,8 +13,8 @@ function insertadmin() {
         "AdEmail": emails,
         "AdminPassword": password
     };
-
-console.log(adminData)
+// for checking the format of the data
+// console.log(adminData)
 
 fetch("http://localhost:2021/insertAdmin", {
     method: "POST",
@@ -48,7 +22,7 @@ fetch("http://localhost:2021/insertAdmin", {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({ 
-        admin: adminData // Pass user data for update
+        admin: adminData // Pass user data for update to the body
     })
 })
 .then(response => {
@@ -62,8 +36,6 @@ fetch("http://localhost:2021/insertAdmin", {
     window.location.href='/List_Admin'; 
 })
 .catch(error => {
-    // Handle error (e.g., display error message)
     console.error("Error insert admin information:", error);
 });
 };
-// });

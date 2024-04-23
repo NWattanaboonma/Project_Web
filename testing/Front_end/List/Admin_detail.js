@@ -1,4 +1,6 @@
+// function auto running add see the content
 document.addEventListener("DOMContentLoaded", function() {
+    // get the inform from cloud
     const admin_id = localStorage.getItem("admin_id")
     // console.log({ id: email})
        
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
         console.log(data); 
         const infro = data.data;
+        // set the value to show detail
         document.getElementById("adID").value=infro.AdminID
         document.getElementById("username").value=infro.UserName
         document.getElementById("roles").value=infro.Roles
@@ -47,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            id: admin_id , // Pass user email for identification
-            userData: adminData // Pass user data for update
+            id: admin_id ,
+            userData: adminData 
         })
     })
     .then(response => {
@@ -58,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
         throw new Error("Failed to update admin information");
     })
     .then(data => {
+        // when the process done set to the list page to see the detail that add
         window.location.href='/List_Admin'; 
     })
     .catch(error => {
-        // Handle error (e.g., display error message)
         console.error("Error updating admin information:", error);
     });
  };
@@ -70,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function deleteadmin() {
     // Get user information from input fields
     const admin_id = localStorage.getItem("admin_id")
-    
 
     fetch('http://localhost:2021/deleteAdmin', {
         method: 'DELETE',
@@ -81,7 +83,7 @@ function deleteadmin() {
     })
     .then(result => result.json())
     .then(data => {
-        console.log(data)
+        // delete Admin kick  he or she out add go to list that their kicked or not
         window.location.href='/List_Admin'; 
     })
     .catch(error => {

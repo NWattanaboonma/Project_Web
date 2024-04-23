@@ -36,10 +36,10 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    /* for effect */
     transition: background-color 0.3s;
 }
 
-button:hover,
 button:hover {
     background-color: lightgrey;
 }
@@ -57,4 +57,10 @@ button:hover {
 }
 .br{
     margin: 8rem;
+}
+.middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }

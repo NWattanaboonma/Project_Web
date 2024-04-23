@@ -19,7 +19,9 @@
             <label for="roles">Roles: <input type="text" id="roles" required></label>
             <label for="email">AdEmail: <input type="text" id="email" required></label>
             <label for="password">AdminPassword: <input type="text" id="password" required></label>
-            <button type="submit" onclick="insertadmin()" id="add">Add</button>
+            <div class="middle">
+                <button type="submit" onclick="insertadmin()" id="add">Add</button>
+            </div>
         </form>
     </div>
     <br>
@@ -27,9 +29,7 @@
     <footer-component></footer-component>
     <script>
          document.getElementById("add").addEventListener("click", function() {
-            // Perform update operation
-
-            // Redirect to the list page after successful update
+            // wait for the add be click add go to the list again to show the detail the admins is added
             window.location.href = "/List_Admin.html";
         });
     </script>
