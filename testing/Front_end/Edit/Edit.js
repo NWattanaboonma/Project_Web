@@ -1,3 +1,4 @@
+// got to that process showing list
 function Change(id){
     if(id==="Ad"){
         window.location.href = "/List_Admin";
