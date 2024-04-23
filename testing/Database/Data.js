@@ -105,7 +105,7 @@ router.post('/login', (req, res) => {
 // insert product
 router.post('/insertProduct', (req, res) => {
     let product = req.body.productData;
-    console.log(product)
+
     if (!product) {
         return res.status(400).send({ error: true, message: 'Please provide Product information' });
     }

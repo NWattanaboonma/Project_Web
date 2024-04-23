@@ -1,61 +1,30 @@
-
+body{
+    background-color: aqua;
+}
 .box{
     width: 800px;
-    height: 500px;
     margin: auto;
-    margin-bottom: 10rem;
+    margin-top: 2rem;
     text-align: center;
+    background-color: antiquewhite;
+    border-radius: 15px;
 }
 .Head{
     font-size: 32px;
 }
 .center{
-    padding: 3rem;
-    background-color: antiquewhite;
-    border-radius: 15px;
+    text-align: center;
     margin: auto;
     width: 80%;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem
+    gap: 3rem
 }
 .center label{
-    text-align: left;
     font-size: 20px;
     width: 100%;
 }
 .center label input{
-    width: 100%;
-}
-.br{
-    margin: 8rem;
-}
-button {
-    background-color: black;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover,
-button:hover {
-    background-color: lightgrey;
-}
-
-#updateBtn {
-    margin-right: 1rem;
-}
-
-#deleteBtn {
-    background-color: black;
-}
-
-#deleteBtn:hover {
-    background-color: lightgrey;
-}
-.br{
-    margin: 8rem;
+    width: 80%;
 }
