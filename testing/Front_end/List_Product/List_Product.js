@@ -45,7 +45,7 @@ function using(){
                             <p class="bsize">SizeXXL:${sizeXXL},SizeSuperXL:${sizeSuperXL},Quantity: ${quantity}</p>
                         </div>  
                     </div>
-                    <button id="edit" onclick="editproduct(${data})">Edit</button>
+                    <button id="Detail" onclick="editproduct(${data})">Edit</button>
                     
                 </div>`;
         }
