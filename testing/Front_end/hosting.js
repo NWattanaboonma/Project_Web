@@ -4,11 +4,7 @@ const express = require('express');
 // need for the url reading
 const path = require('path');
 
-
 const port = 2020;
-
-// const http = require("http");
-const fs = require('fs');
 
 const Project_web = express();
 
@@ -18,13 +14,7 @@ Project_web.use(router);
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
-// // Define MIME type for JavaScript files
-// Project_web.use((req, res, next) => {
-//     if (req.url.endsWith('.js')) {
-//         res.set('Content-Type', 'application/javascript');
-//     }
-//     next();
-// });
+
 router.use("/Nav",express.static(path.join(__dirname, 'Nav')));
 router.use("/product",express.static(path.join(__dirname, 'porduct')));
 function call(Name,file,url){
@@ -57,7 +47,6 @@ call('Login','login.html','/login');
 call('Register','Register.html','/Register');
 
 
-// 
 // search
 call('Adv_search','Advance Search.html','/Advance-Search');
 call('Adv_search','Search_showproducts.html','/Search_showproducts');
@@ -78,8 +67,8 @@ call('product','product.html','/Detail')
 // Guess it
 call('Guess','Guess.html','/Guess')
 
-// Add admin
 
+// listen import 
 Project_web.listen(port, () => {
     console.log(`Server listening on port: ${port}`)
 })

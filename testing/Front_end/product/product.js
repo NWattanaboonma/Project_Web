@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
+    // get the data from the url
+    const urlParams = new URLSearchParams(window.location.search); //URLSearchParams// a built-in JavaScript class that provides methods and properties for working with query parameters in a URL.
+    // this method for getting the information from the url
     const id = urlParams.get('ID');
     
     fetch('http://localhost:2021/product', {
@@ -7,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ product_id: id })
+            body: JSON.stringify({ product_id: id }) // Other hand you can use the pamas to depend on your database we recommend usig body easier to use
         })
         .then(response => {
             if (!response.ok) {

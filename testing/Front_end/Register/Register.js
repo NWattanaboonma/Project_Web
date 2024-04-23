@@ -1,8 +1,3 @@
-//For slow the process to see the console.log that our function is working
-// document.addEventListener("DOMContentLoaded", function() {
-// document.getElementById("Sign_in").addEventListener("click", registerForm);
-// });
-
 function registerForm() {
   const fname = document.getElementById("Fame").value; 
   const lname = document.getElementById("Lame").value; 
