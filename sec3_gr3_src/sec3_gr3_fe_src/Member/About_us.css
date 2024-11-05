@@ -1,0 +1,55 @@
+.bar{
+    height: 50px;
+}
+*{
+    margin: 0;
+    padding: 0%;
+    
+}
+.WHO{
+    width: 1400px;
+    height: 650px;
+    color: aliceblue;
+    display: flex;
+    background-color: black;
+    margin-bottom: 5rem;
+}
+.text_{
+    font-size: 6rem;
+    margin: auto;
+}
+.container{
+    width: 1400px;
+    /* position:relative; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+.box{
+    /* position:relative; */
+    width: 25rem;
+    height: 40rem;
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.text_under {
+    text-align: center;
+    width: 100%;
+    gap: 5rem;
+}
+.cricle{
+    overflow: hidden;
+    margin-top: auto;
+    width: 100%;
+    height: 25rem;
+    background-color: purple;
+    border-radius: 50%;
+}
+.cricle img{
+    max-width: 100%;
+    max-width: 25rem;
+}

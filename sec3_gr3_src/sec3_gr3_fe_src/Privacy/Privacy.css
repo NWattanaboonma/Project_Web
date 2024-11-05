@@ -1,0 +1,53 @@
+.container {
+    text-align: center;
+    width: 1400px;
+}
+.bar{
+    height: 50px;
+}
+body{
+    margin: 0%;
+}
+.information {
+    margin-top: 70px; 
+    width: 1400px;
+    text-align: left;
+    display: flex;
+    justify-content: center; 
+}
+    
+
+div {
+    align-items: center;
+}
+.back_g{
+    width: 1400px;
+    height: 720px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.back_g img{
+    width: 1400px;
+    height: 790px;
+    filter: brightness(1500%);
+    filter: contrast(45%);
+}
+
+.information .bolder {
+    font-weight: bold;
+}
+
+.information ol ul {
+    margin-left: 20px; 
+    width: 1100px;
+    overflow-wrap: break-word;  
+}
+
+
+
+
+
+
+
+

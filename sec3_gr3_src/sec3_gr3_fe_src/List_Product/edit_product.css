@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.product-image-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#productImage {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button:hover {
+    background-color: lightgrey;
+}
+
+#updateBtn  {
+    margin-right: 1rem;
+}
+
+#deleteBtn {
+    background-color: black;
+}
+
+#deleteBtn:hover {
+    background-color: lightgrey;
+}
+.br{
+    margin: 8rem;
+}
+.middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}

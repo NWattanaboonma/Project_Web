@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail User</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/user_list.css">
+    <script src="/user_list.js"></script>
+</head>
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+
+    <div class="container">
+        <div class="box_login">
+            <div class="head_login"><b>User Information</b></div>
+
+            <div id="userDetails"></div>
+            <form class="add-user-form">
+                <label for="newFirstName">First Name:<input type="text" placeholder="First Name" id="newFirstName"></label>
+                <label for="newLastName">Last Name:<input type="text" placeholder="Last Name" id="newLastName"></label>
+                <label for="newEmail">Email:<input type="email" placeholder="Email" id="newEmail" disabled></label>
+                <label for="age">Age:<input type="number" placeholder="Age" id="age"></label>
+                <label for="PhoneNumber">Phone:<input type="number" placeholder="Phone Number" id="PhoneNumber">
+                <div class="center">
+                    <button type="submit" id="updateBtn" onclick="updateuser()">Update</button>
+                    <button type="submit" id="deleteBtn" onclick="deleteuser()">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="br"></div>
+
+    <footer-component></footer-component>
+</body>
+</html>

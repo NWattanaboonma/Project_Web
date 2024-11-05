@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+    width: 1400px;
+}
+.bar{
+    height: 50px;
+}
+body{
+    margin: 0%;
+}
+.information {
+    margin-top: 3rem; 
+    width: 1400px;
+    text-align: left;
+    display: flex;
+    justify-content: center; 
+}
+    
+div {
+    align-items: center;
+}
+.back_g{
+    width: 1400px;
+    height: 720px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.back_g img{
+    width: 1400px;
+    height: 100%;
+    
+    filter: brightness(2000%);
+    filter: contrast(35%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.information .bolder {
+    font-weight: bold;
+}
+
+.information ol ul {
+    margin-left: 20px; 
+    width: 1100px;
+    overflow-wrap: break-word;  
+}

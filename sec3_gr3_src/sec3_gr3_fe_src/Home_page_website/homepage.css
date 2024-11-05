@@ -1,0 +1,99 @@
+body{
+    background-color: white;
+    /* position: absolute;
+    z-index: -1; */
+}
+/* scan W:1440px H:900px */
+*{
+    margin: 0;
+    padding: 0%;
+    
+}
+
+/* here */
+.img_home_size_1{
+    width: 1400px;
+    height: 650px;
+    gap: 0px;
+    display: flex;
+}
+
+.overlay_pic{
+    width: 1400px;
+    height: 650px;
+    display: flex;
+}
+.overlay_text {
+    color: rgb(248, 248, 248); 
+    padding: 10px 20px; 
+    padding-top: 10rem;
+    font-size: 85px; 
+    text-align: right;
+  }
+
+
+.btn_new_collection{
+    width: 1400px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.btn_new_collection p{
+    padding: 1rem 2rem;
+}
+.img_home_size_2{
+    width: 397.21;
+    height: 340px;  
+}
+
+.img_home_size_3{
+    width: 320px;
+    height:290x;  
+}
+
+.box{
+    width: 1400px;
+    display: flex;
+    justify-content: space-around;
+}
+.textbox{
+    font-size: 16px;
+    width: 350px;
+    height: 200px;
+    background-color: #BDE3FF;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.spare_picture{
+    padding: 0%;
+    width: 1400px;
+    /* width: 60%; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_seemore{
+    padding: 12px 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border: 0;
+    border-radius: 5px;
+}
+.btn_seemore:hover{
+    color: aqua;
+    background-color: gray;
+}
+.btn_buy{
+    padding: 12px 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+

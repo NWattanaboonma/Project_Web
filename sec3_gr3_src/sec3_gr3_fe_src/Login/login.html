@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- <link  rel="stylesheet" href="homepage.css"> -->
+    <link  rel="stylesheet" href="/login.css">
+    <script src="/Nav/nav.js" defer></script>
+    <script src = "/login.js"></script>
+
+        
+    <navbar-component></navbar-component>
+</head>
+<body>
+    <nav class="bar"></nav>
+    
+    <div class="container">
+        <div class="bg">
+            <div class="content">
+                HYPEGEAR
+            </div>
+        </div>
+        
+        <div class="box_login">
+            <div class="head_login"><b>Log in</b></div>
+
+            <form>
+                <input type="email" placeholder="Email"  id="Name">
+                <input type="password" placeholder="Password" id="PW">
+                <div>
+                <!-- go to the process login -->
+                <button type="submit" onclick="loginForm()" id="login">Login</button>
+                <!-- go to Register -->
+                <a href="/Register"><p ><u>Sign-up?</u></p></a>
+                </div>
+                
+
+            </form>
+            
+        </div>
+    </div>
+   
+    <footer-component></footer-component>
+    
+</body>
+</html>

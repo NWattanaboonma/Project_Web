@@ -1,0 +1,38 @@
+ .container {
+    margin-top: 100px; 
+    text-align: center;
+    width: 1400px;
+}
+body{
+    margin: 0%;
+}
+.information {
+    margin-top: 70px; 
+    width: 1400px;
+    text-align: left;
+    display: flex;
+    justify-content: center; 
+    
+}
+    
+div {
+    align-items: center;
+}
+
+
+.information .bolder {
+    font-weight: bold;
+}
+
+.information ol ul {
+    margin-left: 20px; 
+}
+
+div img {
+    
+    width:1400px;
+    height: 800px;
+    object-fit: cover;
+}
+
+

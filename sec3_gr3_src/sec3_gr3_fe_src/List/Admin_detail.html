@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Admin</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/Admin_detail.css">
+    <script src="/Admin_detail.js"></script>
+    
+</head>
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <div class="box">
+        <div class="Head"><b>Admin Details</b></div>
+        <!-- detail of the Admin -->
+        <form class="center">
+            <label for="adID">AdminID: <input type="text" id="adID" disabled></label>
+            <label for="username">Username: <input type="text" id="username"></label>
+            <label for="roles">Roles: <input type="text" id="roles"></label>
+            <label for="email">AdEmail: <input type="text" id="email"></label>
+            <label for="password">AdminPassword: <input type="text" id="password"></label>
+            <div class="middle">
+                <button type="submit" onclick="updateadmin()">Update</button>
+                <button type="submit" onclick="deleteadmin()">Delete</button>
+            </div>
+        </form>
+    </div>
+    <footer-component></footer-component>
+
+    
+</body>
+</html>

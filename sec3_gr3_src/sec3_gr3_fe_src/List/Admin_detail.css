@@ -1,0 +1,67 @@
+
+.box{
+    width: 800px;
+    margin: auto;
+    margin-bottom: 10rem;
+    height: 500px;
+    text-align: center;
+}
+.Head{
+    font-size: 32px;
+}
+.center{
+    text-align: left;
+    padding: 3rem;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem
+}
+.center label{
+    font-size: 20px;
+    width: 100%;
+}
+.center label input{
+    width: 100%;
+}
+.br{
+    margin: 8rem;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* for effect */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+
+#updateBtn {
+    margin-right: 1rem;
+}
+
+#deleteBtn {
+    background-color: black;
+}
+
+#deleteBtn:hover {
+    background-color: lightgrey;
+}
+.br{
+    margin: 8rem;
+}
+.middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}

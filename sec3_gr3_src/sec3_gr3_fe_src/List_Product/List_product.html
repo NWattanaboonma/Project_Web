@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Product</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="List_Product.css">
+</head>
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <h1>Products List</h1>
+
+    <div class="div_center">
+        <button id="Add" >Add</button>
+        <div class="container">
+            <div class="header">
+                <div class="Num">Products</div>
+                <div class="inform">Products info</div>
+                <div class="Edit">Edit</div>
+            </div>
+            <div id="list">
+                <!-- showing the Detail -->
+            </div>
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+
+    <script src="List_Product.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            using(); 
+            // call the auto function getting the detail
+        });
+        document.getElementById("Add").addEventListener("click", function() {
+            // go to detail page
+            window.location.href = "/Product_List.html";
+        });
+    </script>
+</body>
+</html>

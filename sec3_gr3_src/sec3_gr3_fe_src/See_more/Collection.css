@@ -1,0 +1,42 @@
+body {
+    position: absolute;
+    z-index: -1;
+}
+*{
+    margin: 0;
+    padding: 0%;
+    
+}
+.collection{
+    
+    width: 1400px;
+    
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.collection p{
+    padding: 1rem 2rem;
+}
+.Description{
+    margin: 4% 20%;
+    font-size: 20px;
+    text-align: left;
+}
+.col_picture{
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img_col_size_1{
+
+    width: 25rem;
+    height: 22rem;
+}
+.col_size{
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+

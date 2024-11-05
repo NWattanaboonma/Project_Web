@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Admin</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/List_css.css">
+    <script src="List_admin.js"></script>
+</head>
+
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <h1>List_Admin</h1>
+
+    <div class="div_center">
+        <button id="Add" >Add</button>
+        <div class="container">
+            <div class="header">
+                <div class="Num">List</div>
+                <div class="inform">Information of Admin</div>
+                <div class="Edit">Edit</div>
+            </div>
+            <div id="list">
+                <!-- Detail from the js come here -->
+            </div>
+        </div>
+    </div>
+            
+<footer-component></footer-component>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // loading this using function other hand you can use the DOM Content to replace and don't need the using function
+        using(); 
+    });
+    document.getElementById("Add").addEventListener("click", function() {
+        // wait for to click on the buttion detail
+            window.location.href = "/Admin_detail_add.html";
+    });
+
+
+</script>
+</body>
+</html>

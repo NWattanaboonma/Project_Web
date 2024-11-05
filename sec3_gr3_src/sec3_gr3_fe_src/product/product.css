@@ -1,0 +1,61 @@
+body{
+    background-color: white;
+}
+.container{
+    padding: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1400px;
+}
+.size{
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    
+}
+img{
+    width: 520px;
+    height: 500px;
+}
+
+.Detail{
+    width: 500px;
+    height: auto;
+}
+
+div .box_product_2{
+    width: 6rem;
+    padding: 8px 12px;
+    font-size: large;
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    margin-bottom: auto;
+}
+.center{
+    width: 480x;
+    display: flex;
+    justify-content: center;
+}
+/* .size{
+    display: flex;
+    justify-content: space-evenly;
+    
+    width: 40rem;
+}
+.size:active{
+    border-color: red;
+} */
+
+.same_line{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+select{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    height: fit-content;
+}
+

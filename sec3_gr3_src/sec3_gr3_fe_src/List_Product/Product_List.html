@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="edit_product.css">
+    <script src="/Product_list.js"></script>
+</head>
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <h1 id="Manow">Edit Product</h1>
+    <form id="editForm">
+        <label for="ProductID">Product ID:</label>
+        <input type="text" id="ProductID" name="ProductID" required><br><br>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+        
+        <label for="collectionName">Collection Name:</label>
+        <input type="text" id="collectionName" name="collectionName" required><br><br>
+        
+        <label for="Material">Material:</label>
+        <input type="text" id="mt" name="Material"><br><br>
+        
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" name="productPrice" required><br><br>
+        
+        <label for="ProductDescription">Product Description:</label>
+        <input type="text" id="ProductDescription" name="ProductDescription"><br><br>
+
+        <label for="sizeS">Size-S:</label>
+        <input type="text" id="sizeS" name="sizeS" required><br><br>
+
+        <label for="sizeM">Size-M:</label>
+        <input type="text" id="sizeM" name="sizeM" required><br><br>
+
+        <label for="sizeL">Size-L:</label>
+        <input type="text" id="sizeL" name="sizeL" required><br><br>
+
+        <label for="sizeXL">Size-XL:</label>
+        <input type="text" id="sizeXL" name="sizeXL" required><br><br>
+
+        <label for="sizeXXL">Size-XXL:</label>
+        <input type="text" id="sizeXXL" name="sizeXXL" required><br><br>
+
+        <label for="sizeSuperXL">Size-SuperXL:</label>
+        <input type="text" id="sizeSuperXL" name="sizeSuperXL" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" required><br><br>
+
+        <label for="productColor">Product Color:</label>
+        <input type="text" id="productColor" name="productColor" required><br><br>
+
+        <label for="productImage">Product Image(string):</label>
+        <input type="text" id="productImage" name="productImage" required><br><br>
+        <!-- add time -->
+        <button type="submit"  onclick="insertproduct()" id="insert">Add</button>
+
+        </form>
+        <div class="br"></div>
+
+        
+    <footer-component></footer-component>
+
+</body>
+</html>

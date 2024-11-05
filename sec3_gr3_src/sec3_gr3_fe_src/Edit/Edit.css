@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    background-color: #151515;
+    height: 800px;
+    align-items: center;
+    gap: 4rem;
+}
+
+.box button {
+    font-size: 3rem;
+    width: 30rem;
+    height: 10rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #272727, #1a1a1a);
+    color: whitesmoke;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.box button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transition: all 0.3s ease;
+}
+
+.box button:hover::before {
+    left: 150%;
+}
+
+#Ad {
+    background-color: #3a3a3a;
+}
+
+#Ad:hover {
+    background-color: #545454;
+}
+
+#User {
+    background-color: #3a3a3a;
+}
+
+#User:hover {
+    background-color: #545454;
+}
+
+#Product {
+    background-color: #3a3a3a;
+}
+
+#Product:hover {
+    background-color: #545454;
+}

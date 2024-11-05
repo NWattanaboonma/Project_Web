@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Admin</title>
+    <script src="/Nav/nav.js"></script>
+    <link rel="stylesheet" href="/Admin_detail.css">
+    <script src="/Admin_detail_add.js"></script>
+</head>
+<body>
+    <navbar-component></navbar-component>
+    <nav class="bar"></nav>
+    <div class="box">
+        <div class="Head"><b>Admin Details</b></div>
+        <form class="center">
+            <label for="adID">AdminID: <input type="text" id="adID" required></label>
+            <label for="username">Username: <input type="text" id="username" required></label>
+            <label for="roles">Roles: <input type="text" id="roles" required></label>
+            <label for="email">AdEmail: <input type="text" id="email" required></label>
+            <label for="password">AdminPassword: <input type="text" id="password" required></label>
+            <div class="middle">
+                <button type="submit" onclick="insertadmin()" id="add">Add</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="br"></div>
+    <footer-component></footer-component>
+    <script>
+         document.getElementById("add").addEventListener("click", function() {
+            // wait for the add be click add go to the list again to show the detail the admins is added
+            window.location.href = "/List_Admin.html";
+        });
+    </script>
+
+    
+</body>
+</html>

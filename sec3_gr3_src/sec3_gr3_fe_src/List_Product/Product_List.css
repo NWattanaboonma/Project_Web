@@ -1,0 +1,33 @@
+body{
+    background-color: aqua;
+}
+.box{
+    width: 800px;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+.Head{
+    font-size: 32px;
+}
+.center{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem
+}
+.center label{
+    font-size: 20px;
+    width: 100%;
+}
+.center label input{
+    width: 80%;
+}
+.br{
+    margin-bottom: 2rem;
+}
